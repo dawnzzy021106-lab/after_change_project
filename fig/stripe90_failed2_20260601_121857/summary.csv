@@ -1,0 +1,12 @@
+parallel_value,mode,total_time_s,decoding_s,network_pure_s,network_inner_s,disk_io_s,meta_s,cross_cluster_count,ios
+5,min cost max flow,34.8492,1.83049,21.9063,29.1683,1.79455,0.013576,Cross-Cluster-Count:51,220
+5,unordered concurrency min cost max flow,15.9567,0.108204,15.6473,25.2355,0.40729,0.015401,Cross-Cluster-Count:51,220
+5,ordered concurrency min cost max flow,13.0634,0.103213,12.608,29.7304,0.477845,0.008011,Cross-Cluster-Count:51,220
+5,join ordered concurrency min cost max flow,7.06726,0.111824,14.1802,23.8077,0.333926,0.00815,Cross-Cluster-Count:51,220
+5,ec_prototype,31.9737,1.95417,21.0521,6.61395,1.71914,0.009762,Cross-Cluster-Count:56,242
+10,min cost max flow,40.4622,2.14619,27.8756,41.5828,1.95127,0.017118,Cross-Cluster-Count:58,258
+10,unordered concurrency min cost max flow,16.2086,0.110996,15.7982,39.3934,0.651062,0.016288,Cross-Cluster-Count:58,258
+10,ordered concurrency min cost max flow,15.4807,0.131148,14.6247,37.589,0.585452,0.008683,Cross-Cluster-Count:58,258
+10,join ordered concurrency min cost max flow,9.41581,0.110955,18.0427,31.4786,0.786854,0.008845,Cross-Cluster-Count:58,258
+10,ec_prototype,35.6007,2.46027,22.7763,6.81397,1.73248,0.010813,Cross-Cluster-Count:60,275
+15,min cost max flow,34.4714,1.86652,23.1928,20.9282,1.68488,0.015619,Cross-Cluster-Count:57,226

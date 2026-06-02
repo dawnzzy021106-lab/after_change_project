@@ -1,0 +1,1012 @@
+[SCHEDULE] global_round=3 edges=5 join_per_round=1 pipeline=1      
+[SCHEDULE] global_round=4 edges=5 join_per_round=1 pipeline=1      
+[SCHEDULE] global_round=5 edges=5 join_per_round=1 pipeline=1      
+[SCHEDULE] global_round=6 edges=5 join_per_round=1 pipeline=1      
+[SCHEDULE] global_round=7 edges=5 join_per_round=1 pipeline=1      
+[SCHEDULE] global_round=8 edges=4 join_per_round=1 pipeline=1      
+[SCHEDULE] global_round=9 edges=4 join_per_round=1 pipeline=1      
+[SCHEDULE] global_round=10 edges=4 join_per_round=1 pipeline=1     
+[SCHEDULE] global_round=11 edges=2 join_per_round=1 pipeline=1     
+[HCCTRL] stage=dispatch dispatch_seq=6 round=0 src=5 dst=1 stripe=33 plan_i=0 help_j=1 task_id=33:0:1 helper_proxy=192.168.1.21:32406 
+main_proxy=192.168.1.13:32910
+[HCCTRL] stage=dispatch dispatch_seq=7 round=0 src=4 dst=2 stripe=7 plan_i=0 help_j=2 task_id=7:0:2 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.14:32910
+[HCCTRL] stage=dispatch dispatch_seq=8 round=0 src=2 dst=3 stripe=69 plan_i=0 help_j=1 task_id=69:0:1 helper_proxy=192.168.1.14:32406 
+main_proxy=192.168.1.20:32910
+[HCCTRL] stage=dispatch dispatch_seq=9 round=0 src=3 dst=4 stripe=74 plan_i=0 help_j=0 task_id=74:0:0 helper_proxy=192.168.1.20:32406 
+main_proxy=192.168.1.25:32910
+[HCCTRL] stage=dispatch dispatch_seq=10 round=0 src=1 dst=5 stripe=89 plan_i=0 help_j=0 task_id=89:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.21:32911
+[HCCTRL] stage=done dispatch_seq=9 round=0 src=3 dst=4 stripe=74 plan_i=0 help_j=0 task_id=74:0:0 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.25:32910 rpc_wall=0.394567 cross_cluster_time=0.389691 phase_total=0.389774
+[HCCTRL] stage=done dispatch_seq=7 round=0 src=4 dst=2 stripe=7 plan_i=0 help_j=2 task_id=7:0:2 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.14:32910 rpc_wall=0.58841 cross_cluster_time=0.587312 phase_total=0.58744
+[HCCTRL] stage=done dispatch_seq=6 round=0 src=5 dst=1 stripe=33 plan_i=0 help_j=1 task_id=33:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.13:32910 rpc_wall=0.594189 cross_cluster_time=0.589766 phase_total=0.589868
+[HCCTRL] stage=done dispatch_seq=8 round=0 src=2 dst=3 stripe=69 plan_i=0 help_j=1 task_id=69:0:1 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.20:32910 rpc_wall=0.731842 cross_cluster_time=0.730396 phase_total=0.730487
+[HCCTRL] stage=done dispatch_seq=10 round=0 src=1 dst=5 stripe=89 plan_i=0 help_j=0 task_id=89:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.21:32911 rpc_wall=0.799874 cross_cluster_time=0.794985 phase_total=0.795071
+[HCCTRL] stage=dispatch dispatch_seq=16 round=1 src=3 dst=1 stripe=83 plan_i=0 help_j=1 task_id=83:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.13:32911
+[HCCTRL] stage=dispatch dispatch_seq=17 round=1 src=1 dst=2 stripe=60 plan_i=0 help_j=0 task_id=60:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32911
+[HCCTRL] stage=dispatch dispatch_seq=18 round=1 src=5 dst=3 stripe=21 plan_i=0 help_j=1 task_id=21:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.20:32911
+[HCCTRL] stage=dispatch dispatch_seq=19 round=1 src=2 dst=4 stripe=85 plan_i=0 help_j=0 task_id=85:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.25:32909
+[HCCTRL] stage=dispatch dispatch_seq=20 round=1 src=4 dst=5 stripe=35 plan_i=0 help_j=1 task_id=35:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.21:32907
+[HCCTRL] stage=done dispatch_seq=19 round=1 src=2 dst=4 stripe=85 plan_i=0 help_j=0 task_id=85:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.25:32909 rpc_wall=0.272117 cross_cluster_time=0.268932 phase_total=0.269011
+[HCCTRL] stage=done dispatch_seq=18 round=1 src=5 dst=3 stripe=21 plan_i=0 help_j=1 task_id=21:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.20:32911 rpc_wall=0.28241 cross_cluster_time=0.278002 phase_total=0.278078
+[HCCTRL] stage=done dispatch_seq=17 round=1 src=1 dst=2 stripe=60 plan_i=0 help_j=0 task_id=60:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32911 rpc_wall=0.291086 cross_cluster_time=0.28664 phase_total=0.286745
+[HCCTRL] stage=done dispatch_seq=16 round=1 src=3 dst=1 stripe=83 plan_i=0 help_j=1 task_id=83:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.13:32911 rpc_wall=0.315875 cross_cluster_time=0.310185 phase_total=0.310297
+[HCCTRL] stage=done dispatch_seq=20 round=1 src=4 dst=5 stripe=35 plan_i=0 help_j=1 task_id=35:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.21:32907 rpc_wall=0.317 cross_cluster_time=0.316175 phase_total=0.316277
+[HCCTRL] stage=dispatch dispatch_seq=25 round=2 src=3 dst=1 stripe=75 plan_i=0 help_j=1 task_id=75:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.13:32909
+[HCCTRL] stage=dispatch dispatch_seq=26 round=2 src=1 dst=2 stripe=7 plan_i=0 help_j=0 task_id=7:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32910
+[HCCTRL] stage=dispatch dispatch_seq=27 round=2 src=5 dst=3 stripe=69 plan_i=0 help_j=2 task_id=69:0:2 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.20:32910
+[HCCTRL] stage=dispatch dispatch_seq=28 round=2 src=2 dst=5 stripe=65 plan_i=0 help_j=0 task_id=65:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.21:32910
+[HCCTRL] stage=done dispatch_seq=26 round=2 src=1 dst=2 stripe=7 plan_i=0 help_j=0 task_id=7:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32910 rpc_wall=0.283044 cross_cluster_time=0.2784 phase_total=0.278492
+[HCCTRL] stage=done dispatch_seq=27 round=2 src=5 dst=3 stripe=69 plan_i=0 help_j=2 task_id=69:0:2 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.20:32910 rpc_wall=0.307552 cross_cluster_time=0.302828 phase_total=0.302946
+[HCCTRL] stage=done dispatch_seq=28 round=2 src=2 dst=5 stripe=65 plan_i=0 help_j=0 task_id=65:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.21:32910 rpc_wall=0.320634 cross_cluster_time=0.319187 phase_total=0.319274
+[HCCTRL] stage=done dispatch_seq=25 round=2 src=3 dst=1 stripe=75 plan_i=0 help_j=1 task_id=75:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.13:32909 rpc_wall=0.333965 cross_cluster_time=0.328492 phase_total=0.328572
+[HCCTRL] stage=dispatch dispatch_seq=34 round=3 src=4 dst=1 stripe=2 plan_i=0 help_j=1 task_id=2:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.13:32912
+[HCCTRL] stage=dispatch dispatch_seq=35 round=3 src=1 dst=2 stripe=4 plan_i=0 help_j=0 task_id=4:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32909
+[HCCTRL] stage=dispatch dispatch_seq=36 round=3 src=5 dst=3 stripe=22 plan_i=0 help_j=1 task_id=22:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.20:32909
+[HCCTRL] stage=dispatch dispatch_seq=37 round=3 src=3 dst=4 stripe=18 plan_i=0 help_j=1 task_id=18:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.25:32908
+[HCCTRL] stage=dispatch dispatch_seq=38 round=3 src=2 dst=5 stripe=70 plan_i=0 help_j=0 task_id=70:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.21:32909
+[HCCTRL] stage=done dispatch_seq=37 round=3 src=3 dst=4 stripe=18 plan_i=0 help_j=1 task_id=18:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.25:32908 rpc_wall=0.293813 cross_cluster_time=0.289186 phase_total=0.28925
+[HCCTRL] stage=done dispatch_seq=36 round=3 src=5 dst=3 stripe=22 plan_i=0 help_j=1 task_id=22:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.20:32909 rpc_wall=0.294212 cross_cluster_time=0.289683 phase_total=0.289789
+[HCCTRL] stage=done dispatch_seq=35 round=3 src=1 dst=2 stripe=4 plan_i=0 help_j=0 task_id=4:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32909 rpc_wall=0.294542 cross_cluster_time=0.289758 phase_total=0.289842
+[HCCTRL] stage=done dispatch_seq=34 round=3 src=4 dst=1 stripe=2 plan_i=0 help_j=1 task_id=2:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.13:32912 rpc_wall=0.305536 cross_cluster_time=0.304581 phase_total=0.304672
+[HCCTRL] stage=done dispatch_seq=38 round=3 src=2 dst=5 stripe=70 plan_i=0 help_j=0 task_id=70:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.21:32909 rpc_wall=0.317904 cross_cluster_time=0.314635 phase_total=0.314729
+[HCCTRL] stage=dispatch dispatch_seq=44 round=4 src=2 dst=1 stripe=2 plan_i=0 help_j=0 task_id=2:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.13:32912
+[HCCTRL] stage=dispatch dispatch_seq=45 round=4 src=4 dst=2 stripe=88 plan_i=0 help_j=1 task_id=88:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.14:32908
+[HCCTRL] stage=dispatch dispatch_seq=46 round=4 src=1 dst=3 stripe=69 plan_i=0 help_j=0 task_id=69:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.20:32910
+[HCCTRL] stage=dispatch dispatch_seq=47 round=4 src=5 dst=4 stripe=74 plan_i=0 help_j=1 task_id=74:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.25:32910
+[HCCTRL] stage=dispatch dispatch_seq=48 round=4 src=3 dst=5 stripe=89 plan_i=0 help_j=1 task_id=89:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.21:32911
+[HCCTRL] stage=done dispatch_seq=45 round=4 src=4 dst=2 stripe=88 plan_i=0 help_j=1 task_id=88:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.14:32908 rpc_wall=0.280801 cross_cluster_time=0.279724 phase_total=0.279842
+[HCCTRL] stage=done dispatch_seq=47 round=4 src=5 dst=4 stripe=74 plan_i=0 help_j=1 task_id=74:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.25:32910 rpc_wall=0.290006 cross_cluster_time=0.284155 phase_total=0.284249
+[HCCTRL] stage=done dispatch_seq=46 round=4 src=1 dst=3 stripe=69 plan_i=0 help_j=0 task_id=69:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.20:32910 rpc_wall=0.291065 cross_cluster_time=0.286371 phase_total=0.28645
+[HCCTRL] stage=done dispatch_seq=44 round=4 src=2 dst=1 stripe=2 plan_i=0 help_j=0 task_id=2:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.13:32912 rpc_wall=0.317396 cross_cluster_time=0.314451 phase_total=0.314547
+[HCCTRL] stage=done dispatch_seq=48 round=4 src=3 dst=5 stripe=89 plan_i=0 help_j=1 task_id=89:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.21:32911 rpc_wall=0.32721 cross_cluster_time=0.321785 phase_total=0.321862
+[HCCTRL] stage=dispatch dispatch_seq=54 round=5 src=2 dst=1 stripe=83 plan_i=0 help_j=0 task_id=83:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.13:32911
+[HCCTRL] stage=dispatch dispatch_seq=55 round=5 src=4 dst=2 stripe=38 plan_i=0 help_j=1 task_id=38:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.14:32907
+[HCCTRL] stage=dispatch dispatch_seq=57 round=5 src=5 dst=4 stripe=85 plan_i=0 help_j=1 task_id=85:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.25:32909
+[HCCTRL] stage=dispatch dispatch_seq=56 round=5 src=1 dst=3 stripe=22 plan_i=0 help_j=0 task_id=22:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.20:32909
+[HCCTRL] stage=dispatch dispatch_seq=58 round=5 src=3 dst=5 stripe=65 plan_i=0 help_j=1 task_id=65:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.21:32910
+Selected main proxy 192.168.1.25:32406 of cluster3 plan 0 stripe 74. Decoding time : 0.072866
+[HCCTRL] stage=done dispatch_seq=57 round=5 src=5 dst=4 stripe=85 plan_i=0 help_j=1 task_id=85:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.25:32909 rpc_wall=0.281238 cross_cluster_time=0.27447 phase_total=0.274587
+[HCCTRL] stage=done dispatch_seq=55 round=5 src=4 dst=2 stripe=38 plan_i=0 help_j=1 task_id=38:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.14:32907 rpc_wall=0.291352 cross_cluster_time=0.290461 phase_total=0.290545
+Selected main proxy 192.168.1.20:32406 of cluster2 plan 0 stripe 69. Decoding time : 0.076536
+[HCCTRL] stage=done dispatch_seq=56 round=5 src=1 dst=3 stripe=22 plan_i=0 help_j=0 task_id=22:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.20:32909 rpc_wall=0.303794 cross_cluster_time=0.29651 phase_total=0.296642
+[HCCTRL] stage=done dispatch_seq=54 round=5 src=2 dst=1 stripe=83 plan_i=0 help_j=0 task_id=83:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.13:32911 rpc_wall=0.316986 cross_cluster_time=0.31376 phase_total=0.31384
+[HCCTRL] stage=done dispatch_seq=58 round=5 src=3 dst=5 stripe=65 plan_i=0 help_j=1 task_id=65:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.21:32910 rpc_wall=0.326027 cross_cluster_time=0.319076 phase_total=0.31917
+[HCCTRL] stage=dispatch dispatch_seq=64 round=6 src=2 dst=1 stripe=75 plan_i=0 help_j=0 task_id=75:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.13:32909
+[HCCTRL] stage=dispatch dispatch_seq=65 round=6 src=1 dst=2 stripe=88 plan_i=0 help_j=0 task_id=88:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32908
+[HCCTRL] stage=dispatch dispatch_seq=66 round=6 src=4 dst=3 stripe=21 plan_i=0 help_j=0 task_id=21:0:0 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.20:32911
+[HCCTRL] stage=dispatch dispatch_seq=67 round=6 src=5 dst=4 stripe=18 plan_i=0 help_j=2 task_id=18:0:2 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.25:32908
+[HCCTRL] stage=dispatch dispatch_seq=68 round=6 src=3 dst=5 stripe=70 plan_i=0 help_j=1 task_id=70:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.21:32909
+Selected main proxy 192.168.1.13:32406 of cluster0 plan 0 stripe 2. Decoding time : 0.096687
+Selected main proxy 192.168.1.25:32406 of cluster3 plan 0 stripe 85. Decoding time : 0.059813
+Selected main proxy 192.168.1.21:32406 of cluster4 plan 0 stripe 89. Decoding time : 0.105254
+[HCCTRL] stage=done dispatch_seq=65 round=6 src=1 dst=2 stripe=88 plan_i=0 help_j=0 task_id=88:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32908 rpc_wall=0.280906 cross_cluster_time=0.274855 phase_total=0.27495
+[HCCTRL] stage=done dispatch_seq=67 round=6 src=5 dst=4 stripe=18 plan_i=0 help_j=2 task_id=18:0:2 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.25:32908 rpc_wall=0.297577 cross_cluster_time=0.285958 phase_total=0.286076
+[HCCTRL] stage=done dispatch_seq=64 round=6 src=2 dst=1 stripe=75 plan_i=0 help_j=0 task_id=75:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.13:32909 rpc_wall=0.306028 cross_cluster_time=0.302891 phase_total=0.30297
+[HCCTRL] stage=done dispatch_seq=68 round=6 src=3 dst=5 stripe=70 plan_i=0 help_j=1 task_id=70:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.21:32909 rpc_wall=0.323109 cross_cluster_time=0.313217 phase_total=0.313379
+Selected main proxy 192.168.1.20:32406 of cluster2 plan 0 stripe 22. Decoding time : 0.091162
+[HCCTRL] stage=done dispatch_seq=66 round=6 src=4 dst=3 stripe=21 plan_i=0 help_j=0 task_id=21:0:0 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.20:32911 rpc_wall=0.327513 cross_cluster_time=0.326321 phase_total=0.326406
+[HCCTRL] stage=dispatch dispatch_seq=74 round=7 src=2 dst=1 stripe=39 plan_i=0 help_j=0 task_id=39:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.13:32907
+[HCCTRL] stage=dispatch dispatch_seq=75 round=7 src=1 dst=2 stripe=38 plan_i=0 help_j=0 task_id=38:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32907
+[HCCTRL] stage=dispatch dispatch_seq=76 round=7 src=4 dst=3 stripe=1 plan_i=0 help_j=1 task_id=1:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.20:32907
+[HCCTRL] stage=dispatch dispatch_seq=77 round=7 src=5 dst=4 stripe=3 plan_i=0 help_j=1 task_id=3:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.25:32907
+[HCCTRL] stage=dispatch dispatch_seq=78 round=7 src=3 dst=5 stripe=35 plan_i=0 help_j=0 task_id=35:0:0 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.21:32907
+Selected main proxy 192.168.1.21:32406 of cluster4 plan 0 stripe 65. Decoding time : 0.05879
+Selected main proxy 192.168.1.20:32406 of cluster2 plan 0 stripe 21. Decoding time : 0.048195
+Selected main proxy 192.168.1.21:32406 of cluster4 plan 0 stripe 70. Decoding time : 0.05603
+[HCCTRL] stage=done dispatch_seq=78 round=7 src=3 dst=5 stripe=35 plan_i=0 help_j=0 task_id=35:0:0 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.21:32907 rpc_wall=0.328077 cross_cluster_time=0.322812 phase_total=0.322891
+[HCCTRL] stage=done dispatch_seq=75 round=7 src=1 dst=2 stripe=38 plan_i=0 help_j=0 task_id=38:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.14:32907 rpc_wall=0.368828 cross_cluster_time=0.363694 phase_total=0.363807
+[HCCTRL] stage=done dispatch_seq=76 round=7 src=4 dst=3 stripe=1 plan_i=0 help_j=1 task_id=1:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.20:32907 rpc_wall=0.441072 cross_cluster_time=0.440046 phase_total=0.44014
+Selected main proxy 192.168.1.21:32406 of cluster4 plan 0 stripe 35. Decoding time : 0.058048
+[HCCTRL] stage=done dispatch_seq=77 round=7 src=5 dst=4 stripe=3 plan_i=0 help_j=1 task_id=3:0:1 helper_proxy=192.168.1.21:32406 main_proxy=192.168.1.25:32907 rpc_wall=0.631675 cross_cluster_time=0.625635 phase_total=0.62573
+Selected main proxy 192.168.1.14:32406 of cluster1 plan 0 stripe 38. Decoding time : 0.082427
+[HCCTRL] stage=done dispatch_seq=74 round=7 src=2 dst=1 stripe=39 plan_i=0 help_j=0 task_id=39:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.13:32907 rpc_wall=0.805638 cross_cluster_time=0.802555 phase_total=0.802621
+[HCCTRL] stage=dispatch dispatch_seq=83 round=8 src=4 dst=1 stripe=33 plan_i=0 help_j=0 task_id=33:0:0 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.13:32910
+[HCCTRL] stage=dispatch dispatch_seq=84 round=8 src=3 dst=2 stripe=60 plan_i=0 help_j=1 task_id=60:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.14:32911
+[HCCTRL] stage=dispatch dispatch_seq=85 round=8 src=1 dst=3 stripe=62 plan_i=0 help_j=0 task_id=62:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.20:32908
+[HCCTRL] stage=dispatch dispatch_seq=86 round=8 src=2 dst=5 stripe=17 plan_i=0 help_j=1 task_id=17:0:1 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.21:32908
+Selected main proxy 192.168.1.14:32406 of cluster1 plan 0 stripe 88. Decoding time : 0.082401
+[HCCTRL] stage=done dispatch_seq=83 round=8 src=4 dst=1 stripe=33 plan_i=0 help_j=0 task_id=33:0:0 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.13:32910 rpc_wall=0.328147 cross_cluster_time=0.326677 phase_total=0.326765
+[HCCTRL] stage=done dispatch_seq=84 round=8 src=3 dst=2 stripe=60 plan_i=0 help_j=1 task_id=60:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.14:32911 rpc_wall=0.329922 cross_cluster_time=0.321767 phase_total=0.321926
+Selected main proxy 192.168.1.13:32406 of cluster0 plan 0 stripe 75. Decoding time : 0.113704
+[HCCTRL] stage=done dispatch_seq=86 round=8 src=2 dst=5 stripe=17 plan_i=0 help_j=1 task_id=17:0:1 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.21:32908 rpc_wall=0.500101 cross_cluster_time=0.496518 phase_total=0.496599
+Selected main proxy 192.168.1.14:32406 of cluster1 plan 0 stripe 60. Decoding time : 0.080006
+[HCCTRL] stage=done dispatch_seq=85 round=8 src=1 dst=3 stripe=62 plan_i=0 help_j=0 task_id=62:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.20:32908 rpc_wall=0.658402 cross_cluster_time=0.652422 phase_total=0.652513
+[HCCTRL] stage=dispatch dispatch_seq=91 round=9 src=4 dst=1 stripe=32 plan_i=0 help_j=1 task_id=32:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.13:32908
+[HCCTRL] stage=dispatch dispatch_seq=92 round=9 src=3 dst=2 stripe=7 plan_i=0 help_j=1 task_id=7:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.14:32910
+[HCCTRL] stage=dispatch dispatch_seq=93 round=9 src=2 dst=3 stripe=62 plan_i=0 help_j=1 task_id=62:0:1 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.20:32908
+[HCCTRL] stage=dispatch dispatch_seq=94 round=9 src=1 dst=5 stripe=17 plan_i=0 help_j=0 task_id=17:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.21:32908
+Selected main proxy 192.168.1.13:32406 of cluster0 plan 0 stripe 83. Decoding time : 0.116154
+Selected main proxy 192.168.1.13:32406 of cluster0 plan 0 stripe 33. Decoding time : 0.095382
+[HCCTRL] stage=done dispatch_seq=92 round=9 src=3 dst=2 stripe=7 plan_i=0 help_j=1 task_id=7:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.14:32910 rpc_wall=0.279215 cross_cluster_time=0.272339 phase_total=0.272556
+[HCCTRL] stage=done dispatch_seq=91 round=9 src=4 dst=1 stripe=32 plan_i=0 help_j=1 task_id=32:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.13:32908 rpc_wall=0.287026 cross_cluster_time=0.286175 phase_total=0.286255
+[HCCTRL] stage=done dispatch_seq=94 round=9 src=1 dst=5 stripe=17 plan_i=0 help_j=0 task_id=17:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.21:32908 rpc_wall=0.450762 cross_cluster_time=0.445913 phase_total=0.445997
+Selected main proxy 192.168.1.14:32406 of cluster1 plan 0 stripe 7. Decoding time : 0.07614
+[HCCTRL] stage=done dispatch_seq=93 round=9 src=2 dst=3 stripe=62 plan_i=0 help_j=1 task_id=62:0:1 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.20:32908 rpc_wall=0.61371 cross_cluster_time=0.610409 phase_total=0.610482
+[HCCTRL] stage=dispatch dispatch_seq=99 round=10 src=4 dst=1 stripe=39 plan_i=0 help_j=1 task_id=39:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.13:32907
+[HCCTRL] stage=dispatch dispatch_seq=100 round=10 src=3 dst=2 stripe=4 plan_i=0 help_j=1 task_id=4:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.14:32909
+[HCCTRL] stage=dispatch dispatch_seq=101 round=10 src=2 dst=3 stripe=1 plan_i=0 help_j=0 task_id=1:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.20:32907
+[HCCTRL] stage=dispatch dispatch_seq=102 round=10 src=1 dst=4 stripe=18 plan_i=0 help_j=0 task_id=18:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.25:32908
+Selected main proxy 192.168.1.21:32406 of cluster4 plan 0 stripe 17. Decoding time : 0.09843
+[HCCTRL] stage=done dispatch_seq=102 round=10 src=1 dst=4 stripe=18 plan_i=0 help_j=0 task_id=18:0:0 helper_proxy=192.168.1.13:32406 main_proxy=192.168.1.25:32908 rpc_wall=0.295713 cross_cluster_time=0.289655 phase_total=0.289752
+[HCCTRL] stage=done dispatch_seq=99 round=10 src=4 dst=1 stripe=39 
+plan_i=0 help_j=1 task_id=39:0:1 helper_proxy=192.168.1.25:32406 main_proxy=192.168.1.13:32907 rpc_wall=0.300364 cross_cluster_time=0.299272 phase_total=0.299386
+[HCCTRL] stage=done dispatch_seq=100 round=10 src=3 dst=2 stripe=4 
+plan_i=0 help_j=1 task_id=4:0:1 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.14:32909 rpc_wall=0.303998 cross_cluster_time=0.296354 phase_total=0.296522
+[HCCTRL] stage=done dispatch_seq=101 round=10 src=2 dst=3 stripe=1 
+plan_i=0 help_j=0 task_id=1:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.20:32907 rpc_wall=0.377694 cross_cluster_time=0.376828 phase_total=0.376918
+[HCCTRL] stage=dispatch dispatch_seq=105 round=11 src=3 dst=1 stripe=32 plan_i=0 help_j=0 task_id=32:0:0 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.13:32908
+[HCCTRL] stage=dispatch dispatch_seq=106 round=11 src=2 dst=4 stripe=3 plan_i=0 help_j=0 task_id=3:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.25:32907
+Selected main proxy 192.168.1.25:32406 of cluster3 plan 0 stripe 18. Decoding time : 0.074507
+Selected main proxy 192.168.1.14:32406 of cluster1 plan 0 stripe 4. Decoding time : 0.08111
+Selected main proxy 192.168.1.20:32406 of cluster2 plan 0 stripe 1. Decoding time : 0.048249
+[HCCTRL] stage=done dispatch_seq=106 round=11 src=2 dst=4 stripe=3 
+plan_i=0 help_j=0 task_id=3:0:0 helper_proxy=192.168.1.14:32406 main_proxy=192.168.1.25:32907 rpc_wall=0.282257 cross_cluster_time=0.278559 phase_total=0.27862
+Selected main proxy 192.168.1.25:32406 of cluster3 plan 0 stripe 3. Decoding time : 0.064962
+[HCCTRL] stage=done dispatch_seq=105 round=11 src=3 dst=1 stripe=32 plan_i=0 help_j=0 task_id=32:0:0 helper_proxy=192.168.1.20:32406 main_proxy=192.168.1.13:32908 rpc_wall=0.71344 cross_cluster_time=0.501986 phase_total=0.502135
+Selected main proxy 192.168.1.20:32406 of cluster2 plan 0 stripe 62. Decoding time : 0.082165
+Selected main proxy 192.168.1.13:32406 of cluster0 plan 0 stripe 39. Decoding time : 0.10735
+Selected main proxy 192.168.1.13:32406 of cluster0 plan 0 stripe 32. Decoding time : 0.087193
+Repair[ 5 ]: Decode/Cross/InnerNet/IO(agg): 0.10735 / 13.5176 / 1.66966 / 0.305735
+Repair[ 5 ]: Decode/Cross/InnerNet/IO(agg): 0.082427 / 3.84691 / 17.6811 / 0.186723
+Repair[ 3 ]: Decode/Cross/InnerNet/IO(agg): 0.058048 / 11.4525 / 0.187736 / 0.060357
+Repair[ 13 ]: Decode/Cross/InnerNet/IO(agg): 0.087193 / 13.7773 / 1.20595 / 0.579009
+Repair[ 8 ]: Decode/Cross/InnerNet/IO(agg): 0.064962 / 13.8404 / 0.296417 / 0.07776
+Repair[ 11 ]: Decode/Cross/InnerNet/IO(agg): 0.074507 / 8.78155 / 8.78839 / 0.166426
+Repair[ 12 ]: Decode/Cross/InnerNet/IO(agg): 0.048249 / 13.5723 / 0.182364 / 0.068707
+Repair[ 4 ]: Decode/Cross/InnerNet/IO(agg): 0.082401 / 2.97569 / 17.9354 / 0.237091
+Repair[ 5 ]: Decode/Cross/InnerNet/IO(agg): 0.09843 / 4.73684 / 19.6918 / 0.176475
+Repair[ 2 ]: Decode/Cross/InnerNet/IO(agg): 0.113704 / 11.159 / 1.85234 / 0.230862
+Repair[ 12 ]: Decode/Cross/InnerNet/IO(agg): 0.095382 / 11.5605 / 0.647035 / 0.170237
+Repair[ 5 ]: Decode/Cross/InnerNet/IO(agg): 0.08111 / 4.55438 / 23.3749 / 0.31078
+Repair[ 1 ]: Decode/Cross/InnerNet/IO(agg): 0.082165 / 5.58015 / 20.7693 / 0.239765
+Repair[ 6 ]: Decode/Cross/InnerNet/IO(agg): 0.059813 / 10.7258 / 0.205241 / 0.056597
+Repair[ 0 ]: Decode/Cross/InnerNet/IO(agg): 0.116154 / 11.3761 / 2.03898 / 0.233263
+Repair[ 4 ]: Decode/Cross/InnerNet/IO(agg): 0.05603 / 11.1332 / 0.215108 / 0.054092
+Repair[ 7 ]: Decode/Cross/InnerNet/IO(agg): 0.072866 / 10.4044 / 0.272291 / 0.085295
+Repair[ 0 ]: Decode/Cross/InnerNet/IO(agg): 0.091162 / 2.22587 / 21.6958 / 0.479767
+Repair[ 5 ]: Decode/Cross/InnerNet/IO(agg): 0.076536 / 1.57919 / 13.3838 / 0.174207
+Repair[ 2 ]: Decode/Cross/InnerNet/IO(agg): 0.07614 / 4.20804 / 14.8678 / 0.296136
+Repair[ 10 ]: Decode/Cross/InnerNet/IO(agg): 0.05879 / 10.804 / 0.216196 / 0.061314
+Repair[ 5 ]: Decode/Cross/InnerNet/IO(agg): 0.096687 / 9.73214 / 1.04256 / 0.372194
+Repair[ 9 ]: Decode/Cross/InnerNet/IO(agg): 0.105254 / 2.13795 / 20.3657 / 0.39157
+Repair[ 8 ]: Decode/Cross/InnerNet/IO(agg): 0.080006 / 4.17598 / 21.9759 / 0.561493
+Repair[ 12 ]: Decode/Cross/InnerNet/IO(agg): 0.048195 / 11.123 / 0.222493 / 0.06818
+[DEBUG] Stripe timeline written to: /home/hadoop/zzy/ec_prototype-master/repair_timeline_stripe_join_ordered.svg
+[DEBUG] Block timeline written to: /home/hadoop/zzy/ec_prototype-master/repair_timeline_block_join_ordered.svg
+[TEST] Placement reverted to initial state.
+[REPAIR] Total failed stripes to repair: 25
+[REPAIR] Failed Stripe IDs and their failed block indices:
+  - Stripe ID 39: [ 5 ]
+  - Stripe ID 38: [ 5 ]
+  - Stripe ID 35: [ 3 ]
+  - Stripe ID 32: [ 13 ]
+  - Stripe ID 3: [ 8 ]
+  - Stripe ID 18: [ 11 ]
+  - Stripe ID 1: [ 12 ]
+  - Stripe ID 88: [ 4 ]
+  - Stripe ID 17: [ 5 ]
+  - Stripe ID 75: [ 2 ]
+  - Stripe ID 33: [ 12 ]
+  - Stripe ID 4: [ 5 ]
+  - Stripe ID 62: [ 1 ]
+  - Stripe ID 85: [ 6 ]
+  - Stripe ID 83: [ 0 ]
+  - Stripe ID 70: [ 4 ]
+  - Stripe ID 74: [ 7 ]
+  - Stripe ID 22: [ 0 ]
+  - Stripe ID 69: [ 5 ]
+  - Stripe ID 7: [ 2 ]
+  - Stripe ID 65: [ 10 ]
+  - Stripe ID 2: [ 5 ]
+  - Stripe ID 89: [ 9 ]
+  - Stripe ID 60: [ 8 ]
+  - Stripe ID 21: [ 12 ]
+partition_random result:
+0: 8 13
+1: 7 10
+2: 4 12
+3: 1 5 6 11
+4: 0 2 3 9
+Finish generate repair plan.
+Simulation:
+Cluster 0: 0 2 3 9  | 1
+Cluster 1: 8 13  | 1
+Cluster 2: 7  | 1
+New block will be placed at node 2 (cluster 0)
+Finish simulation! 3
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.25:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.109932
+New blocks placement for stripe 39:
+  Block 5: from node 2 (cluster 0) to node 2 (cluster 0)
+Repair[ 5 ]: total = 1.64361s, latest = 1.64361s. Decode: total = 0.109932
+partition_random result:
+0: 6 9
+1: 4 5 8 11
+2: 3
+3: 2 7 10 13
+4: 0 1 12
+Finish generate repair plan.
+Simulation:
+Cluster 0: 2 7 10 13  | 1
+Cluster 1: 0 1 12  | 1
+New block will be placed at node 9 (cluster 0)
+Finish simulation! 5
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.14:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.105697
+New blocks placement for stripe 38:
+  Block 5: from node 9 (cluster 0) to node 9 (cluster 0)
+Repair[ 5 ]: total = 2.91131s, latest = 1.2677s. Decode: total = 0.215629
+partition_random result:
+0: 5 13
+1: 4 7
+2: 2 9 10 12
+3: 1 3
+4: 0 6 8 11
+Finish generate repair plan.
+Simulation:
+Cluster 0: 2 9 10 12  | 1
+Cluster 1: 0 6 8 11  | 1
+Cluster 2: 5  | 1
+New block will be placed at node 1 (cluster 0)
+Finish simulation! 8
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.20:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.093386
+New blocks placement for stripe 35:
+  Block 3: from node 1 (cluster 0) to node 1 (cluster 0)
+Repair[ 3 ]: total = 4.54278s, latest = 1.63147s. Decode: total = 0.309015
+partition_random result:
+0: 8 9
+1: 4 6 7 12
+2: 3 10
+3: 1 5
+4: 0 2 11 13
+Finish generate repair plan.
+Simulation:
+Cluster 0: 4 6 7 12  | 1
+Cluster 1: 8 9  | 1
+Cluster 2: 3  | 1
+New block will be placed at node 8 (cluster 0)
+Finish simulation! 11
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.20:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.110116
+New blocks placement for stripe 32:
+  Block 13: from node 8 (cluster 0) to node 8 (cluster 0)
+Repair[ 13 ]: total = 6.2308s, latest = 1.68802s. Decode: total = 0.419131
+partition_random result:
+0: 7
+1: 3 8 11
+2: 2 6 9 13
+3: 1 5 10
+4: 0 4 12
+Finish generate repair plan.
+Simulation:
+Cluster 0: 2 6 9 13  | 1
+Cluster 1: 1 5 10  | 1
+Cluster 2: 0  | 1
+New block will be placed at node 2 (cluster 0)
+Finish simulation! 14
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.105373
+New blocks placement for stripe 3:
+  Block 8: from node 2 (cluster 0) to node 2 (cluster 0)
+Repair[ 8 ]: total = 7.79361s, latest = 1.5628s. Decode: total = 0.524504
+partition_random result:
+0: 6 7
+1: 3 5 10
+2: 2 11 12
+3: 1 9 13
+4: 0 4 8
+Finish generate repair plan.
+Simulation:
+Cluster 0: 3 5 10  | 1
+Cluster 1: 1 9 13  | 1
+Cluster 2: 0 4  | 1
+New block will be placed at node 5 (cluster 0)
+Finish simulation! 17
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.20:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.092148
+New blocks placement for stripe 18:
+  Block 11: from node 5 (cluster 0) to node 5 (cluster 0)
+Repair[ 11 ]: total = 9.33942s, latest = 1.54581s. Decode: total = 
+0.616652
+partition_random result:
+0: 10
+1: 3 4 7 13
+2: 2 5
+3: 1 8 9 11
+4: 0 6 12
+Finish generate repair plan.
+Simulation:
+Cluster 0: 3 4 7 13  | 1
+Cluster 1: 1 8 9 11  | 1
+New block will be placed at node 5 (cluster 0)
+Finish simulation! 19
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.14:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.090484
+New blocks placement for stripe 1:
+  Block 12: from node 5 (cluster 0) to node 5 (cluster 0)
+Repair[ 12 ]: total = 10.5409s, latest = 1.20153s. Decode: total = 
+0.707136
+partition_random result:
+0: 8 9 10
+1: 4 7 13
+2: 3 12
+3: 1 2 5 6
+4: 0 11
+Finish generate repair plan.
+Simulation:
+Cluster 0: 1 2 5 6  | 1
+Cluster 1: 8 9 10  | 1
+Cluster 2: 3  | 1
+New block will be placed at node 1 (cluster 0)
+Finish simulation! 22
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.14:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.099794
+New blocks placement for stripe 88:
+  Block 4: from node 1 (cluster 0) to node 1 (cluster 0)
+Repair[ 4 ]: total = 12.1307s, latest = 1.58973s. Decode: total = 0.80693
+partition_random result:
+0: 4
+1: 3 6 9 13
+2: 2 8 10
+3: 1 5 11 12
+4: 0 7
+Finish generate repair plan.
+Simulation:
+Cluster 0: 3 6 9 13  | 1
+Cluster 1: 2 8 10  | 1
+New block will be placed at node 6 (cluster 0)
+Finish simulation! 24
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.105129
+New blocks placement for stripe 17:
+  Block 5: from node 6 (cluster 0) to node 6 (cluster 0)
+Repair[ 5 ]: total = 13.4464s, latest = 1.31571s. Decode: total = 0.912059
+partition_random result:
+0: 11 13
+1: 6 7
+2: 5 8
+3: 1 2 9 12
+4: 0 3 4 10
+Finish generate repair plan.
+Simulation:
+Cluster 0: 0 3 4 10  | 1
+Cluster 1: 11 13  | 1
+Cluster 2: 6  | 1
+New block will be placed at node 4 (cluster 0)
+Finish simulation! 27
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.110649
+New blocks placement for stripe 75:
+  Block 2: from node 4 (cluster 0) to node 4 (cluster 0)
+Repair[ 2 ]: total = 15.3334s, latest = 1.88705s. Decode: total = 1.02271
+partition_random result:
+0: 6 9 10 13
+1: 5 7 12
+2: 2 3
+3: 1 4 8 11
+4: 0
+Finish generate repair plan.
+Simulation:
+Cluster 0: 6 9 10 13  | 1
+Cluster 1: 1 4 8 11  | 1
+New block will be placed at node 4 (cluster 0)
+Finish simulation! 29
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.096347
+New blocks placement for stripe 33:
+  Block 12: from node 4 (cluster 0) to node 4 (cluster 0)
+Repair[ 12 ]: total = 16.5335s, latest = 1.20001s. Decode: total = 
+1.11906
+partition_random result:
+0: 13
+1: 10 11
+2: 2 4 7
+3: 1 5 8 9
+4: 0 3 6 12
+Finish generate repair plan.
+Simulation:
+Cluster 0: 0 3 6 12  | 1
+Cluster 1: 2 4 7  | 1
+New block will be placed at node 4 (cluster 0)
+Finish simulation! 31
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.20:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.100844
+New blocks placement for stripe 4:
+  Block 5: from node 4 (cluster 0) to node 4 (cluster 0)
+Repair[ 5 ]: total = 17.8629s, latest = 1.32943s. Decode: total = 1.2199
+partition_random result:
+0: 13
+1: 5 7 10
+2: 2 8 12
+3: 1 6 9 11
+4: 0 3 4
+Finish generate repair plan.
+Simulation:
+Cluster 0: 5 7 10  | 1
+Cluster 1: 2 8 12  | 1
+Cluster 2: 0  | 1
+New block will be placed at node 5 (cluster 0)
+Finish simulation! 34
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.20:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.108203
+New blocks placement for stripe 62:
+  Block 1: from node 5 (cluster 0) to node 5 (cluster 0)
+Repair[ 1 ]: total = 19.6127s, latest = 1.74983s. Decode: total = 1.3281
+partition_random result:
+0: 7 9
+1: 6
+2: 3 4 5 12
+3: 1 2 11 13
+4: 0 8 10
+Finish generate repair plan.
+Simulation:
+Cluster 0: 3 4 5 12  | 1
+Cluster 1: 1 2 11 13  | 1
+Cluster 2: 0 8  | 1
+New block will be placed at node 8 (cluster 0)
+Finish simulation! 37
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.074044
+New blocks placement for stripe 85:
+  Block 6: from node 8 (cluster 0) to node 8 (cluster 0)
+Repair[ 6 ]: total = 21.0055s, latest = 1.39282s. Decode: total = 1.40215
+partition_random result:
+0: 8 13
+1: 6 10
+2: 2 5
+3: 1 4 7 12
+4: 0 3 9 11
+Finish generate repair plan.
+Simulation:
+Cluster 0: 1 4 7 12  | 1
+Cluster 1: 8 13  | 1
+Cluster 2: 6  | 1
+New block will be placed at node 2 (cluster 0)
+Finish simulation! 40
+Selected help proxy 192.168.1.21:32406
+Selected help proxy 192.168.1.20:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.107399
+New blocks placement for stripe 83:
+  Block 0: from node 2 (cluster 0) to node 2 (cluster 0)
+Repair[ 0 ]: total = 22.6857s, latest = 1.68015s. Decode: total = 1.50955
+partition_random result:
+0: 11
+1: 4 6 12
+2: 2 3 7 13
+3: 1 9
+4: 0 5 8 10
+Finish generate repair plan.
+Simulation:
+Cluster 0: 2 3 7 13  | 1
+Cluster 1: 0 5 8 10  | 1
+New block will be placed at node 8 (cluster 0)
+Finish simulation! 42
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.20:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.095761
+New blocks placement for stripe 70:
+  Block 4: from node 8 (cluster 0) to node 8 (cluster 0)
+Repair[ 4 ]: total = 24.0431s, latest = 1.3574s. Decode: total = 1.60531
+partition_random result:
+0: 10
+1: 6 13
+2: 2 4 5 11
+3: 1 7 12
+4: 0 3 8 9
+Finish generate repair plan.
+Simulation:
+Cluster 0: 2 4 5 11  | 1
+Cluster 1: 0 3 8 9  | 1
+New block will be placed at node 8 (cluster 0)
+Finish simulation! 44
+Selected help proxy 192.168.1.20:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.097074
+New blocks placement for stripe 74:
+  Block 7: from node 8 (cluster 0) to node 8 (cluster 0)
+Repair[ 7 ]: total = 25.4551s, latest = 1.41201s. Decode: total = 1.70238
+partition_random result:
+0: 8 10 11
+1: 6 7
+2: 4
+3: 1 5 12 13
+4: 0 2 3 9
+Finish generate repair plan.
+Simulation:
+Cluster 0: 1 5 12 13  | 1
+Cluster 1: 8 10 11  | 1
+New block will be placed at node 3 (cluster 0)
+Finish simulation! 46
+Selected help proxy 192.168.1.20:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.110797
+New blocks placement for stripe 22:
+  Block 0: from node 3 (cluster 0) to node 3 (cluster 0)
+Repair[ 0 ]: total = 26.8072s, latest = 1.35206s. Decode: total = 1.81318
+partition_random result:
+0: 7 12 13
+1: 5 8 10
+2: 3 4 11
+3: 1 6
+4: 0 2 9
+Finish generate repair plan.
+Simulation:
+Cluster 0: 7 12 13  | 1
+Cluster 1: 3 4 11  | 1
+Cluster 2: 0 2  | 1
+New block will be placed at node 7 (cluster 0)
+Finish simulation! 49
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.20:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.093856
+New blocks placement for stripe 69:
+  Block 5: from node 7 (cluster 0) to node 7 (cluster 0)
+Repair[ 5 ]: total = 28.423s, latest = 1.61583s. Decode: total = 1.90703
+partition_random result:
+0: 6 7
+1: 3 8
+2: 2 5 11
+3: 1 10 12 13
+4: 0 4 9
+Finish generate repair plan.
+Simulation:
+Cluster 0: 1 10 12 13  | 1
+Cluster 1: 0 4 9  | 1
+Cluster 2: 6  | 1
+New block will be placed at node 8 (cluster 0)
+Finish simulation! 52
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.14:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.102142
+New blocks placement for stripe 7:
+  Block 2: from node 8 (cluster 0) to node 8 (cluster 0)
+Repair[ 2 ]: total = 30.0472s, latest = 1.6242s. Decode: total = 2.00918
+partition_random result:
+0: 9 10
+1: 3 4 6
+2: 2 8
+3: 1 11 12
+4: 0 5 7 13
+Finish generate repair plan.
+Simulation:
+Cluster 0: 0 5 7 13  | 1
+Cluster 1: 3 4 6  | 1
+Cluster 2: 1 11  | 1
+New block will be placed at node 9 (cluster 0)
+Finish simulation! 55
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.20:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.09147
+New blocks placement for stripe 65:
+  Block 10: from node 9 (cluster 0) to node 9 (cluster 0)
+Repair[ 10 ]: total = 31.7002s, latest = 1.65303s. Decode: total = 
+2.10065
+partition_random result:
+0: 9 10 12
+1: 4 5 7 11
+2: 3
+3: 2 6
+4: 0 1 8 13
+Finish generate repair plan.
+Simulation:
+Cluster 0: 0 1 8 13  | 1
+Cluster 1: 9 10 12  | 1
+New block will be placed at node 6 (cluster 0)
+Finish simulation! 57
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.14:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.104946
+New blocks placement for stripe 2:
+  Block 5: from node 6 (cluster 0) to node 6 (cluster 0)
+Repair[ 5 ]: total = 32.9821s, latest = 1.28187s. Decode: total = 2.20559
+partition_random result:
+0: 5 7 10 13
+1: 3 6 9 12
+2: 2 11
+3: 1 4 8
+4: 0
+Finish generate repair plan.
+Simulation:
+Cluster 0: 5 7 10 13  | 1
+Cluster 1: 1 4 8  | 1
+New block will be placed at node 2 (cluster 0)
+Finish simulation! 59
+Selected help proxy 192.168.1.21:32406
+Selected help proxy 192.168.1.20:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.103128
+New blocks placement for stripe 89:
+  Block 9: from node 2 (cluster 0) to node 2 (cluster 0)
+Repair[ 9 ]: total = 34.3965s, latest = 1.41442s. Decode: total = 2.30872
+partition_random result:
+0: 9 11 13
+1: 7
+2: 3 5 8 10
+3: 1 6
+4: 0 2 4 12
+Finish generate repair plan.
+Simulation:
+Cluster 0: 0 2 4 12  | 1
+Cluster 1: 9 11 13  | 1
+New block will be placed at node 6 (cluster 0)
+Finish simulation! 61
+Selected help proxy 192.168.1.14:32406
+Selected help proxy 192.168.1.20:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.103506
+New blocks placement for stripe 60:
+  Block 8: from node 6 (cluster 0) to node 6 (cluster 0)
+Repair[ 8 ]: total = 35.7104s, latest = 1.31391s. Decode: total = 2.41223
+partition_random result:
+0: 5 7 12
+1: 2 4 13
+2: 1 3 6 11
+3: 0 8 9 10
+Finish generate repair plan.
+Simulation:
+Cluster 0: 1 3 6 11  | 1
+Cluster 1: 0 8 9 10  | 1
+New block will be placed at node 8 (cluster 0)
+Finish simulation! 63
+Selected help proxy 192.168.1.25:32406
+Selected help proxy 192.168.1.21:32406
+Selected main proxy 192.168.1.13:32406 of cluster0. Decoding time : 0.099765
+New blocks placement for stripe 21:
+  Block 12: from node 8 (cluster 0) to node 8 (cluster 0)
+Repair[ 12 ]: total = 36.961s, latest = 1.25061s. Decode: total = 2.51199
+[DELETE] Delete 90 stripes!
+[DELETE] Finish delete!
+
+---------------------------------------------------------------------------------------------------
+hadoop@node12:~/zzy/ec_prototype-master$ ./project/build/run_client 90 config.ini 2
+*-*-*-*-*-*-*-EC-Info-*-*-*-*-*-*-*
+Partial?:1 P-S:1 R-P:0 R-M:0
+RS RANDOM(s) RAND(m)
+(10,4) 1(x) 33554432(bytes)25(stripes) flow_repair_max_parallel=0 (<=0:auto) flow_parallel(unordered/ordered/join)=10/10/10
+*-*-*-*-*-*-*-EC-Info-*-*-*-*-*-*-*
+[SET] Send Obj00 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.79192, encoding time: 0.345751
+[SET] Send Obj01 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.99792, encoding time: 0.289654
+[SET] Send Obj02 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.553, encoding time: 0.287731
+[SET] Send Obj03 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.82243, encoding time: 0.287749
+[SET] Send Obj04 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.73616, encoding time: 0.288432
+[SET] Send Obj05 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.54292, encoding time: 0.283278
+[SET] Send Obj06 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.8139, encoding time: 0.2848
+[SET] Send Obj07 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.81687, encoding time: 0.284014
+[SET] Send Obj08 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.96586, encoding time: 0.508972
+[SET] Send Obj09 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.99455, encoding time: 0.288533
+[SET] Send Obj10 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.28568, encoding time: 0.300596
+[SET] Send Obj11 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.0487, encoding time: 0.329049
+[SET] Send Obj12 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.72496, encoding time: 0.288582
+[SET] Send Obj13 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.71834, encoding time: 0.288387
+[SET] Send Obj14 to proxy_address:192.168.1.13:32906
+[SET] set time: 7.00674, encoding time: 0.28582
+[SET] Send Obj15 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.80317, encoding time: 0.279681
+[SET] Send Obj16 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.71715, encoding time: 0.285621
+[SET] Send Obj17 to proxy_address:192.168.1.25:32906
+[SET] set time: 7.11439, encoding time: 0.284718
+[SET] Send Obj18 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.98278, encoding time: 0.286095
+[SET] Send Obj19 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.00788, encoding time: 0.288203
+[SET] Send Obj20 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.52696, encoding time: 0.284022
+[SET] Send Obj21 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.69935, encoding time: 0.286164
+[SET] Send Obj22 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.70017, encoding time: 0.288656
+[SET] Send Obj23 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.51771, encoding time: 0.285848
+[SET] Send Obj24 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.72842, encoding time: 0.288584
+[SET] Send Obj25 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.81572, encoding time: 0.284798
+[SET] Send Obj26 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.71615, encoding time: 0.288582
+[SET] Send Obj27 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.80734, encoding time: 0.283222
+[SET] Send Obj28 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.70998, encoding time: 0.288494
+[SET] Send Obj29 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.52199, encoding time: 0.284443
+[SET] Send Obj30 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.99013, encoding time: 0.288514
+[SET] Send Obj31 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.53072, encoding time: 0.285033
+[SET] Send Obj32 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.70654, encoding time: 0.288112
+[SET] Send Obj33 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.60515, encoding time: 0.327064
+[SET] Send Obj34 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.81187, encoding time: 0.34508
+[SET] Send Obj35 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.52123, encoding time: 0.283906
+[SET] Send Obj36 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.53101, encoding time: 0.285066
+[SET] Send Obj37 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.54438, encoding time: 0.285922
+[SET] Send Obj38 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.81481, encoding time: 0.285951
+[SET] Send Obj39 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.5216, encoding time: 0.282058
+[SET] Send Obj40 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.54394, encoding time: 0.284873
+[SET] Send Obj41 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.96209, encoding time: 0.285413
+[SET] Send Obj42 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.82488, encoding time: 0.28456
+[SET] Send Obj43 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.5447, encoding time: 0.285569
+[SET] Send Obj44 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.94958, encoding time: 0.394202
+[SET] Send Obj45 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.79913, encoding time: 0.283504
+[SET] Send Obj46 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.8038, encoding time: 0.285657
+[SET] Send Obj47 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.8105, encoding time: 0.28325
+[SET] Send Obj48 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.5537, encoding time: 0.285358
+[SET] Send Obj49 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.52768, encoding time: 0.284344
+[SET] Send Obj50 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.81793, encoding time: 0.286122
+[SET] Send Obj51 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.53425, encoding time: 0.285464
+[SET] Send Obj52 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.51925, encoding time: 0.28366
+[SET] Send Obj53 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.91873, encoding time: 0.392394
+[SET] Send Obj54 to proxy_address:192.168.1.13:32906
+[SET] set time: 7.26095, encoding time: 0.285934
+[SET] Send Obj55 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.7269, encoding time: 0.288719
+[SET] Send Obj56 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.51938, encoding time: 0.285342
+[SET] Send Obj57 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.52608, encoding time: 0.285591
+[SET] Send Obj58 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.09169, encoding time: 0.283424
+[SET] Send Obj59 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.78039, encoding time: 0.327464
+[SET] Send Obj60 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.70781, encoding time: 0.289511
+[SET] Send Obj61 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.51828, encoding time: 0.282633
+[SET] Send Obj62 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.83819, encoding time: 0.284912
+[SET] Send Obj63 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.09568, encoding time: 0.284888
+[SET] Send Obj64 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.81446, encoding time: 0.284804
+[SET] Send Obj65 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.52818, encoding time: 0.281922
+[SET] Send Obj66 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.70277, encoding time: 0.285497
+[SET] Send Obj67 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.80673, encoding time: 0.283914
+[SET] Send Obj68 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.9137, encoding time: 0.389597
+[SET] Send Obj69 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.81137, encoding time: 0.283351
+[SET] Send Obj70 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.53167, encoding time: 0.285392
+[SET] Send Obj71 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.54604, encoding time: 0.28295
+[SET] Send Obj72 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.08733, encoding time: 0.284818
+[SET] Send Obj73 to proxy_address:192.168.1.13:32906
+[SET] set time: 7.26255, encoding time: 0.288043
+[SET] Send Obj74 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.05145, encoding time: 0.604768
+[SET] Send Obj75 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.53173, encoding time: 0.283652
+[SET] Send Obj76 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.91583, encoding time: 0.390231
+[SET] Send Obj77 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.99325, encoding time: 0.288359
+[SET] Send Obj78 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.2554, encoding time: 0.321832
+[SET] Send Obj79 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.81129, encoding time: 0.284747
+[SET] Send Obj80 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.35684, encoding time: 0.348164
+[SET] Send Obj81 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.02592, encoding time: 0.558021
+[SET] Send Obj82 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.83054, encoding time: 0.285428
+[SET] Send Obj83 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.69682, encoding time: 0.298686
+[SET] Send Obj84 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.55436, encoding time: 0.284789
+[SET] Send Obj85 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.82238, encoding time: 0.284596
+[SET] Send Obj86 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.40667, encoding time: 0.285273
+[SET] Send Obj87 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.38167, encoding time: 0.285752
+[SET] Send Obj88 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.3381, encoding time: 0.336333
+[SET] Send Obj89 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.38004, encoding time: 0.284485
+Total set time: 614.299, average set time:6.82555
+Node-Level Repair (Failing 1 nodes):
+Failed Node IDs: 0
+
+================= min cost max flow =================
+Repair Result:        
+  Total Time:         38.8939s
+  |- Decoding (Pure): 2.04553s
+  |- Network (Pure):  26.3395s
+  |- Network (Inner): 32.9089s
+  |- Disk I/O (Agg):  2.04931s
+  Meta (Coord):       0.040567s
+  Cross-Cluster-Count:59
+  I/Os:               251
+
+================= unordered concurrency min cost max flow =================
+Repair Result:        
+  Total Time:         13.6458s
+  |- Decoding (Pure): 0.113682s
+  |- Network (Pure):  13.3752s
+  |- Network (Inner): 29.1605s
+  |- Disk I/O (Agg):  0.45393s
+  Meta (Coord):       0.030872s
+  Cross-Cluster-Count:59
+  I/Os:               251
+
+================= ordered concurrency min cost max flow =================
+Repair Result:        
+  Total Time:         12.8894s
+  |- Decoding (Pure): 0.124154s
+  |- Network (Pure):  11.7721s
+  |- Network (Inner): 28.0065s
+  |- Disk I/O (Agg):  0.548291s
+  Meta (Coord):       0.028867s
+  Cross-Cluster-Count:59
+  I/Os:               251
+
+================= join ordered concurrency min cost max flow =================
+Repair Result:        
+  Total Time:         7.40434s
+  |- Decoding (Pure): 0.116154s
+  |- Network (Pure):  13.8404s
+  |- Network (Inner): 23.3749s
+  |- Disk I/O (Agg):  0.579009s
+  Meta (Coord):       0.028252s
+  Cross-Cluster-Count:59
+  I/Os:               251
+
+================== ec_prototype =====================
+Repair Result:        
+  Total Time:         36.9634s
+  |- Decoding (Pure): 2.51199s
+  |- Network (Pure):  23.3377s
+  |- Network (Inner): 7.70813s
+  |- Disk I/O (Agg):  2.13183s
+  Meta (Coord):       0.034913s
+  Cross-Cluster-Count:63
+  I/Os:               275
+[DEL] deleting Stripe 89
+[DEL] deleting Stripe 88
+[DEL] deleting Stripe 87
+[DEL] deleting Stripe 86
+[DEL] deleting Stripe 85
+[DEL] deleting Stripe 84
+[DEL] deleting Stripe 83
+[DEL] deleting Stripe 82
+[DEL] deleting Stripe 81
+[DEL] deleting Stripe 80
+[DEL] deleting Stripe 79
+[DEL] deleting Stripe 78
+[DEL] deleting Stripe 77
+[DEL] deleting Stripe 76
+[DEL] deleting Stripe 75
+[DEL] deleting Stripe 74
+[DEL] deleting Stripe 73
+[DEL] deleting Stripe 72
+[DEL] deleting Stripe 71
+[DEL] deleting Stripe 70
+[DEL] deleting Stripe 69
+[DEL] deleting Stripe 68
+[DEL] deleting Stripe 67
+[DEL] deleting Stripe 66
+[DEL] deleting Stripe 65
+[DEL] deleting Stripe 64
+[DEL] deleting Stripe 63
+[DEL] deleting Stripe 62
+[DEL] deleting Stripe 61
+[DEL] deleting Stripe 60
+[DEL] deleting Stripe 59
+[DEL] deleting Stripe 28
+[DEL] deleting Stripe 27
+[DEL] deleting Stripe 26
+[DEL] deleting Stripe 25
+[DEL] deleting Stripe 24
+[DEL] deleting Stripe 23
+[DEL] deleting Stripe 22
+[DEL] deleting Stripe 21
+[DEL] deleting Stripe 20
+[DEL] deleting Stripe 19
+[DEL] deleting Stripe 18
+[DEL] deleting Stripe 17
+[DEL] deleting Stripe 16
+[DEL] deleting Stripe 15
+[DEL] deleting Stripe 14
+[DEL] deleting Stripe 13
+[DEL] deleting Stripe 0
+[DEL] deleting Stripe 1
+[DEL] deleting Stripe 2
+[DEL] deleting Stripe 3
+[DEL] deleting Stripe 4
+[DEL] deleting Stripe 5
+[DEL] deleting Stripe 6
+[DEL] deleting Stripe 7
+[DEL] deleting Stripe 8
+[DEL] deleting Stripe 9
+[DEL] deleting Stripe 10
+[DEL] deleting Stripe 11
+[DEL] deleting Stripe 12
+[DEL] deleting Stripe 29
+[DEL] deleting Stripe 30
+[DEL] deleting Stripe 31
+[DEL] deleting Stripe 32
+[DEL] deleting Stripe 33
+[DEL] deleting Stripe 34
+[DEL] deleting Stripe 35
+[DEL] deleting Stripe 36
+[DEL] deleting Stripe 37
+[DEL] deleting Stripe 38
+[DEL] deleting Stripe 39
+[DEL] deleting Stripe 40
+[DEL] deleting Stripe 41
+[DEL] deleting Stripe 42
+[DEL] deleting Stripe 43
+[DEL] deleting Stripe 44
+[DEL] deleting Stripe 45
+[DEL] deleting Stripe 46
+[DEL] deleting Stripe 47
+[DEL] deleting Stripe 48
+[DEL] deleting Stripe 49
+[DEL] deleting Stripe 50
+[DEL] deleting Stripe 51
+[DEL] deleting Stripe 52
+[DEL] deleting Stripe 53
+[DEL] deleting Stripe 54
+[DEL] deleting Stripe 55
+[DEL] deleting Stripe 56
+[DEL] deleting Stripe 57
+[DEL] deleting Stripe 58
+
+--------------------------------------------------------------------------------------------------------------------

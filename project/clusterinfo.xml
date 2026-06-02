@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<clusters>
+	<cluster id="0" proxy="192.168.1.13:32406">
+		<datanodes>
+			<datanode uri="192.168.1.13:17600" />
+			<datanode uri="192.168.1.13:17601" />
+			<datanode uri="192.168.1.13:17602" />
+			<datanode uri="192.168.1.13:17603" />
+			<datanode uri="192.168.1.13:17604" />
+			<datanode uri="192.168.1.13:17605" />
+			<datanode uri="192.168.1.13:17606" />
+			<datanode uri="192.168.1.13:17607" />
+			<datanode uri="192.168.1.13:17608" />
+			<datanode uri="192.168.1.13:17609" />
+		</datanodes>
+	</cluster>
+	<cluster id="1" proxy="192.168.1.14:32406">
+		<datanodes>
+			<datanode uri="192.168.1.14:17610" />
+			<datanode uri="192.168.1.14:17611" />
+			<datanode uri="192.168.1.14:17612" />
+			<datanode uri="192.168.1.14:17613" />
+			<datanode uri="192.168.1.14:17614" />
+			<datanode uri="192.168.1.14:17615" />
+			<datanode uri="192.168.1.14:17616" />
+			<datanode uri="192.168.1.14:17617" />
+			<datanode uri="192.168.1.14:17618" />
+			<datanode uri="192.168.1.14:17619" />
+		</datanodes>
+	</cluster>
+	<cluster id="2" proxy="192.168.1.20:32406">
+		<datanodes>
+			<datanode uri="192.168.1.20:17620" />
+			<datanode uri="192.168.1.20:17621" />
+			<datanode uri="192.168.1.20:17622" />
+			<datanode uri="192.168.1.20:17623" />
+			<datanode uri="192.168.1.20:17624" />
+			<datanode uri="192.168.1.20:17625" />
+			<datanode uri="192.168.1.20:17626" />
+			<datanode uri="192.168.1.20:17627" />
+			<datanode uri="192.168.1.20:17628" />
+			<datanode uri="192.168.1.20:17629" />
+		</datanodes>
+	</cluster>
+	<cluster id="3" proxy="192.168.1.25:32406">
+		<datanodes>
+			<datanode uri="192.168.1.25:17630" />
+			<datanode uri="192.168.1.25:17631" />
+			<datanode uri="192.168.1.25:17632" />
+			<datanode uri="192.168.1.25:17633" />
+			<datanode uri="192.168.1.25:17634" />
+			<datanode uri="192.168.1.25:17635" />
+			<datanode uri="192.168.1.25:17636" />
+			<datanode uri="192.168.1.25:17637" />
+			<datanode uri="192.168.1.25:17638" />
+			<datanode uri="192.168.1.25:17639" />
+		</datanodes>
+	</cluster>
+	<cluster id="4" proxy="192.168.1.21:32406">
+		<datanodes>
+			<datanode uri="192.168.1.21:17640" />
+			<datanode uri="192.168.1.21:17641" />
+			<datanode uri="192.168.1.21:17642" />
+			<datanode uri="192.168.1.21:17643" />
+			<datanode uri="192.168.1.21:17644" />
+			<datanode uri="192.168.1.21:17645" />
+			<datanode uri="192.168.1.21:17646" />
+			<datanode uri="192.168.1.21:17647" />
+			<datanode uri="192.168.1.21:17648" />
+			<datanode uri="192.168.1.21:17649" />
+		</datanodes>
+	</cluster>
+</clusters>

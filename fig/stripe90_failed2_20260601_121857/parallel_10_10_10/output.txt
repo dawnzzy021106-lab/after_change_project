@@ -1,0 +1,333 @@
+*-*-*-*-*-*-*-EC-Info-*-*-*-*-*-*-*
+Partial?:1 P-S:1 R-P:0 R-M:0
+RS RANDOM(s) RAND(m)
+(10,4) 1(x) 33554432(bytes)25(stripes) flow_repair_max_parallel=0 (<=0:auto) flow_parallel(unordered/ordered/join)=10/10/10
+*-*-*-*-*-*-*-EC-Info-*-*-*-*-*-*-*
+[SET] Send Obj00 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.51585, encoding time: 0.28567
+[SET] Send Obj01 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.08549, encoding time: 0.284713
+[SET] Send Obj02 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.7682, encoding time: 0.329066
+[SET] Send Obj03 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.51708, encoding time: 0.284008
+[SET] Send Obj04 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.61924, encoding time: 0.327363
+[SET] Send Obj05 to proxy_address:192.168.1.25:32906
+[SET] set time: 7.1056, encoding time: 0.280668
+[SET] Send Obj06 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.52536, encoding time: 0.284501
+[SET] Send Obj07 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.51925, encoding time: 0.283027
+[SET] Send Obj08 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.66028, encoding time: 0.287901
+[SET] Send Obj09 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.72762, encoding time: 0.290998
+[SET] Send Obj10 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.73137, encoding time: 0.288768
+[SET] Send Obj11 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.8243, encoding time: 0.282193
+[SET] Send Obj12 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.69386, encoding time: 0.288859
+[SET] Send Obj13 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.71597, encoding time: 0.285751
+[SET] Send Obj14 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.07222, encoding time: 0.644119
+[SET] Send Obj15 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.70692, encoding time: 0.288522
+[SET] Send Obj16 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.51976, encoding time: 0.280699
+[SET] Send Obj17 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.23032, encoding time: 0.289733
+[SET] Send Obj18 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.69179, encoding time: 0.325035
+[SET] Send Obj19 to proxy_address:192.168.1.25:32906
+[SET] set time: 7.08773, encoding time: 0.281361
+[SET] Send Obj20 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.52347, encoding time: 0.284225
+[SET] Send Obj21 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.70067, encoding time: 0.288267
+[SET] Send Obj22 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.5158, encoding time: 0.28112
+[SET] Send Obj23 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.76818, encoding time: 0.327079
+[SET] Send Obj24 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.98088, encoding time: 0.285663
+[SET] Send Obj25 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.70218, encoding time: 0.285797
+[SET] Send Obj26 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.80742, encoding time: 0.283813
+[SET] Send Obj27 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.32573, encoding time: 0.323129
+[SET] Send Obj28 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.1005, encoding time: 0.282461
+[SET] Send Obj29 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.5149, encoding time: 0.284407
+[SET] Send Obj30 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.70061, encoding time: 0.285816
+[SET] Send Obj31 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.75199, encoding time: 0.320441
+[SET] Send Obj32 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.81347, encoding time: 0.282847
+[SET] Send Obj33 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.51965, encoding time: 0.284404
+[SET] Send Obj34 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.70633, encoding time: 0.28839
+[SET] Send Obj35 to proxy_address:192.168.1.13:32906
+[SET] set time: 7.28471, encoding time: 0.288862
+[SET] Send Obj36 to proxy_address:192.168.1.13:32906
+[SET] set time: 7.00312, encoding time: 0.288024
+[SET] Send Obj37 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.52528, encoding time: 0.281349
+[SET] Send Obj38 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.51603, encoding time: 0.280918
+[SET] Send Obj39 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.5104, encoding time: 0.397756
+[SET] Send Obj40 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.55196, encoding time: 0.284294
+[SET] Send Obj41 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.3037, encoding time: 0.30287
+[SET] Send Obj42 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.50558, encoding time: 0.283928
+[SET] Send Obj43 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.00448, encoding time: 0.28872
+[SET] Send Obj44 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.79442, encoding time: 0.358263
+[SET] Send Obj45 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.55348, encoding time: 0.46171
+[SET] Send Obj46 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.91301, encoding time: 0.392055
+[SET] Send Obj47 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.03524, encoding time: 0.309758
+[SET] Send Obj48 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.8269, encoding time: 0.283083
+[SET] Send Obj49 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.81128, encoding time: 0.281985
+[SET] Send Obj50 to proxy_address:192.168.1.13:32906
+[SET] set time: 7.56895, encoding time: 0.288285
+[SET] Send Obj51 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.5176, encoding time: 0.28462
+[SET] Send Obj52 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.54807, encoding time: 0.284163
+[SET] Send Obj53 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.53765, encoding time: 0.285134
+[SET] Send Obj54 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.5199, encoding time: 0.283273
+[SET] Send Obj55 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.5127, encoding time: 0.28363
+[SET] Send Obj56 to proxy_address:192.168.1.25:32906
+[SET] set time: 7.39175, encoding time: 0.28311
+[SET] Send Obj57 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.80674, encoding time: 0.283343
+[SET] Send Obj58 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.99296, encoding time: 0.2858
+[SET] Send Obj59 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.04051, encoding time: 0.325297
+[SET] Send Obj60 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.73364, encoding time: 0.304696
+[SET] Send Obj61 to proxy_address:192.168.1.21:32906
+[SET] set time: 6.91884, encoding time: 0.395798
+[SET] Send Obj62 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.24476, encoding time: 0.72112
+[SET] Send Obj63 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.51281, encoding time: 0.281928
+[SET] Send Obj64 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.78252, encoding time: 0.34601
+[SET] Send Obj65 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.54102, encoding time: 0.284046
+[SET] Send Obj66 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.71561, encoding time: 0.288269
+[SET] Send Obj67 to proxy_address:192.168.1.13:32906
+[SET] set time: 6.72764, encoding time: 0.287877
+[SET] Send Obj68 to proxy_address:192.168.1.25:32906
+[SET] set time: 7.07151, encoding time: 0.283385
+[SET] Send Obj69 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.52008, encoding time: 0.284668
+[SET] Send Obj70 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.7964, encoding time: 0.283913
+[SET] Send Obj71 to proxy_address:192.168.1.13:32906
+[SET] set time: 7.56715, encoding time: 0.28853
+[SET] Send Obj72 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.25895, encoding time: 0.450229
+[SET] Send Obj73 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.74027, encoding time: 0.330586
+[SET] Send Obj74 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.06939, encoding time: 0.282702
+[SET] Send Obj75 to proxy_address:192.168.1.25:32906
+[SET] set time: 7.08999, encoding time: 0.282662
+[SET] Send Obj76 to proxy_address:192.168.1.20:32906
+[SET] set time: 7.04289, encoding time: 0.319481
+[SET] Send Obj77 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.47379, encoding time: 0.392006
+[SET] Send Obj78 to proxy_address:192.168.1.14:32906
+[SET] set time: 7.40073, encoding time: 0.284036
+[SET] Send Obj79 to proxy_address:192.168.1.13:32906
+[SET] set time: 7.07702, encoding time: 0.351806
+[SET] Send Obj80 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.52216, encoding time: 0.283805
+[SET] Send Obj81 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.85597, encoding time: 0.383367
+[SET] Send Obj82 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.56313, encoding time: 0.750879
+[SET] Send Obj83 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.54781, encoding time: 0.28186
+[SET] Send Obj84 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.76879, encoding time: 0.337643
+[SET] Send Obj85 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.51896, encoding time: 0.284469
+[SET] Send Obj86 to proxy_address:192.168.1.14:32906
+[SET] set time: 6.80162, encoding time: 0.282509
+[SET] Send Obj87 to proxy_address:192.168.1.21:32906
+[SET] set time: 7.5436, encoding time: 0.448056
+[SET] Send Obj88 to proxy_address:192.168.1.20:32906
+[SET] set time: 6.77577, encoding time: 0.346508
+[SET] Send Obj89 to proxy_address:192.168.1.25:32906
+[SET] set time: 6.82714, encoding time: 0.280607
+Total set time: 618.336, average set time:6.8704
+Node-Level Repair (Failing 1 nodes):
+Failed Node IDs: 0 
+
+================= min cost max flow =================
+Repair Result:        
+  Total Time:         40.4622s
+  |- Decoding (Pure): 2.14619s
+  |- Network (Pure):  27.8756s
+  |- Network (Inner): 41.5828s
+  |- Disk I/O (Agg):  1.95127s
+  Meta (Coord):       0.017118s
+  Cross-Cluster-Count:58
+  I/Os:               258
+
+================= unordered concurrency min cost max flow =================
+Repair Result:        
+  Total Time:         16.2086s
+  |- Decoding (Pure): 0.110996s
+  |- Network (Pure):  15.7982s
+  |- Network (Inner): 39.3934s
+  |- Disk I/O (Agg):  0.651062s
+  Meta (Coord):       0.016288s
+  Cross-Cluster-Count:58
+  I/Os:               258
+
+================= ordered concurrency min cost max flow =================
+Repair Result:        
+  Total Time:         15.4807s
+  |- Decoding (Pure): 0.131148s
+  |- Network (Pure):  14.6247s
+  |- Network (Inner): 37.589s
+  |- Disk I/O (Agg):  0.585452s
+  Meta (Coord):       0.008683s
+  Cross-Cluster-Count:58
+  I/Os:               258
+
+================= join ordered concurrency min cost max flow =================
+Repair Result:        
+  Total Time:         9.41581s
+  |- Decoding (Pure): 0.110955s
+  |- Network (Pure):  18.0427s
+  |- Network (Inner): 31.4786s
+  |- Disk I/O (Agg):  0.786854s
+  Meta (Coord):       0.008845s
+  Cross-Cluster-Count:58
+  I/Os:               258
+
+================== ec_prototype =====================
+Repair Result:        
+  Total Time:         35.6007s
+  |- Decoding (Pure): 2.46027s
+  |- Network (Pure):  22.7763s
+  |- Network (Inner): 6.81397s
+  |- Disk I/O (Agg):  1.73248s
+  Meta (Coord):       0.010813s
+  Cross-Cluster-Count:60
+  I/Os:               275
+[DEL] deleting Stripe 89
+[DEL] deleting Stripe 88
+[DEL] deleting Stripe 87
+[DEL] deleting Stripe 86
+[DEL] deleting Stripe 85
+[DEL] deleting Stripe 84
+[DEL] deleting Stripe 83
+[DEL] deleting Stripe 82
+[DEL] deleting Stripe 81
+[DEL] deleting Stripe 80
+[DEL] deleting Stripe 79
+[DEL] deleting Stripe 78
+[DEL] deleting Stripe 77
+[DEL] deleting Stripe 76
+[DEL] deleting Stripe 75
+[DEL] deleting Stripe 74
+[DEL] deleting Stripe 73
+[DEL] deleting Stripe 72
+[DEL] deleting Stripe 71
+[DEL] deleting Stripe 70
+[DEL] deleting Stripe 69
+[DEL] deleting Stripe 68
+[DEL] deleting Stripe 67
+[DEL] deleting Stripe 66
+[DEL] deleting Stripe 65
+[DEL] deleting Stripe 64
+[DEL] deleting Stripe 63
+[DEL] deleting Stripe 62
+[DEL] deleting Stripe 61
+[DEL] deleting Stripe 60
+[DEL] deleting Stripe 59
+[DEL] deleting Stripe 58
+[DEL] deleting Stripe 57
+[DEL] deleting Stripe 56
+[DEL] deleting Stripe 55
+[DEL] deleting Stripe 54
+[DEL] deleting Stripe 53
+[DEL] deleting Stripe 52
+[DEL] deleting Stripe 51
+[DEL] deleting Stripe 50
+[DEL] deleting Stripe 49
+[DEL] deleting Stripe 48
+[DEL] deleting Stripe 47
+[DEL] deleting Stripe 46
+[DEL] deleting Stripe 45
+[DEL] deleting Stripe 44
+[DEL] deleting Stripe 43
+[DEL] deleting Stripe 42
+[DEL] deleting Stripe 41
+[DEL] deleting Stripe 40
+[DEL] deleting Stripe 39
+[DEL] deleting Stripe 38
+[DEL] deleting Stripe 37
+[DEL] deleting Stripe 36
+[DEL] deleting Stripe 35
+[DEL] deleting Stripe 34
+[DEL] deleting Stripe 33
+[DEL] deleting Stripe 32
+[DEL] deleting Stripe 31
+[DEL] deleting Stripe 30
+[DEL] deleting Stripe 29
+[DEL] deleting Stripe 28
+[DEL] deleting Stripe 27
+[DEL] deleting Stripe 26
+[DEL] deleting Stripe 25
+[DEL] deleting Stripe 24
+[DEL] deleting Stripe 23
+[DEL] deleting Stripe 22
+[DEL] deleting Stripe 21
+[DEL] deleting Stripe 20
+[DEL] deleting Stripe 19
+[DEL] deleting Stripe 18
+[DEL] deleting Stripe 17
+[DEL] deleting Stripe 16
+[DEL] deleting Stripe 15
+[DEL] deleting Stripe 14
+[DEL] deleting Stripe 13
+[DEL] deleting Stripe 12
+[DEL] deleting Stripe 11
+[DEL] deleting Stripe 10
+[DEL] deleting Stripe 9
+[DEL] deleting Stripe 8
+[DEL] deleting Stripe 7
+[DEL] deleting Stripe 6
+[DEL] deleting Stripe 5
+[DEL] deleting Stripe 4
+[DEL] deleting Stripe 3
+[DEL] deleting Stripe 2
+[DEL] deleting Stripe 1
+[DEL] deleting Stripe 0

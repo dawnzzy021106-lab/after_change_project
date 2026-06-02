@@ -1,0 +1,610 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='1950'>
+<rect width='100%' height='100%' fill='white'/>
+<text x='10' y='22' font-size='16' font-family='monospace'>Block timeline (join_ordered)</text>
+<text x='10' y='42' font-size='12' font-family='monospace'>unit: seconds</text>
+<text x='10' y='58' font-size='12' font-family='monospace' fill='#333'>compute_schedule:</text>
+<text x='18' y='72' font-size='11' font-family='monospace' fill='#333'>global round=0 (1->2:1) (2->5:1) (3->4:1) (4->3:1) (5->1:1) </text>
+<text x='18' y='86' font-size='11' font-family='monospace' fill='#333'>global round=1 (2->4:1) (3->5:1) (4->3:1) (5->1:1) </text>
+<text x='18' y='100' font-size='11' font-family='monospace' fill='#333'>global round=2 (2->3:1) (3->4:1) (4->5:1) (5->2:1) </text>
+<text x='18' y='114' font-size='11' font-family='monospace' fill='#333'>global round=3 (1->4:1) (3->5:1) (4->1:1) (5->3:1) </text>
+<text x='18' y='128' font-size='11' font-family='monospace' fill='#333'>global round=4 (1->3:1) (3->2:1) (4->1:1) </text>
+<line x1='180' y1='168' x2='1580' y2='168' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='163' font-size='11' font-family='monospace'>S8 B4 help</text>
+<line x1='180' y1='192' x2='1580' y2='192' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='187' font-size='11' font-family='monospace'>S8 B5 help</text>
+<line x1='180' y1='216' x2='1580' y2='216' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='211' font-size='11' font-family='monospace'>S8 B7 help</text>
+<line x1='180' y1='240' x2='1580' y2='240' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='235' font-size='11' font-family='monospace'>S3 B1 help</text>
+<line x1='180' y1='264' x2='1580' y2='264' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='259' font-size='11' font-family='monospace'>S3 B8 help</text>
+<line x1='180' y1='288' x2='1580' y2='288' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='283' font-size='11' font-family='monospace'>S3 B10 help</text>
+<line x1='180' y1='312' x2='1580' y2='312' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='307' font-size='11' font-family='monospace'>S21 B5 help</text>
+<line x1='180' y1='336' x2='1580' y2='336' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='331' font-size='11' font-family='monospace'>S21 B6 help</text>
+<line x1='180' y1='360' x2='1580' y2='360' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='355' font-size='11' font-family='monospace'>S21 B9 help</text>
+<line x1='180' y1='384' x2='1580' y2='384' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='379' font-size='11' font-family='monospace'>S21 B11 help</text>
+<line x1='180' y1='408' x2='1580' y2='408' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='403' font-size='11' font-family='monospace'>S14 B4 help</text>
+<line x1='180' y1='432' x2='1580' y2='432' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='427' font-size='11' font-family='monospace'>S14 B9 help</text>
+<line x1='180' y1='456' x2='1580' y2='456' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='451' font-size='11' font-family='monospace'>S14 B11 help</text>
+<line x1='180' y1='480' x2='1580' y2='480' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='475' font-size='11' font-family='monospace'>S14 B13 help</text>
+<line x1='180' y1='504' x2='1580' y2='504' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='499' font-size='11' font-family='monospace'>S16 B3 help</text>
+<line x1='180' y1='528' x2='1580' y2='528' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='523' font-size='11' font-family='monospace'>S16 B4 help</text>
+<line x1='180' y1='552' x2='1580' y2='552' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='547' font-size='11' font-family='monospace'>S16 B7 help</text>
+<line x1='180' y1='576' x2='1580' y2='576' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='571' font-size='11' font-family='monospace'>S20 B4 help</text>
+<line x1='180' y1='600' x2='1580' y2='600' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='595' font-size='11' font-family='monospace'>S20 B5 help</text>
+<line x1='180' y1='624' x2='1580' y2='624' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='619' font-size='11' font-family='monospace'>S20 B8 help</text>
+<line x1='180' y1='648' x2='1580' y2='648' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='643' font-size='11' font-family='monospace'>S12 B4 help</text>
+<line x1='180' y1='672' x2='1580' y2='672' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='667' font-size='11' font-family='monospace'>S12 B6 help</text>
+<line x1='180' y1='696' x2='1580' y2='696' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='691' font-size='11' font-family='monospace'>S12 B9 help</text>
+<line x1='180' y1='720' x2='1580' y2='720' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='715' font-size='11' font-family='monospace'>S12 B10 help</text>
+<line x1='180' y1='744' x2='1580' y2='744' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='739' font-size='11' font-family='monospace'>S21 B0 help</text>
+<line x1='180' y1='768' x2='1580' y2='768' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='763' font-size='11' font-family='monospace'>S21 B3 help</text>
+<line x1='180' y1='792' x2='1580' y2='792' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='787' font-size='11' font-family='monospace'>S21 B4 help</text>
+<line x1='180' y1='816' x2='1580' y2='816' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='811' font-size='11' font-family='monospace'>S9 B1 help</text>
+<line x1='180' y1='840' x2='1580' y2='840' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='835' font-size='11' font-family='monospace'>S9 B5 help</text>
+<line x1='180' y1='864' x2='1580' y2='864' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='859' font-size='11' font-family='monospace'>S9 B7 help</text>
+<line x1='180' y1='888' x2='1580' y2='888' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='883' font-size='11' font-family='monospace'>S9 B13 help</text>
+<line x1='180' y1='912' x2='1580' y2='912' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='907' font-size='11' font-family='monospace'>S4 B0 help</text>
+<line x1='180' y1='936' x2='1580' y2='936' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='931' font-size='11' font-family='monospace'>S4 B9 help</text>
+<line x1='180' y1='960' x2='1580' y2='960' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='955' font-size='11' font-family='monospace'>S4 B10 help</text>
+<line x1='180' y1='984' x2='1580' y2='984' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='979' font-size='11' font-family='monospace'>S8 B0 help</text>
+<line x1='180' y1='1008' x2='1580' y2='1008' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1003' font-size='11' font-family='monospace'>S8 B1 help</text>
+<line x1='180' y1='1032' x2='1580' y2='1032' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1027' font-size='11' font-family='monospace'>S8 B6 help</text>
+<line x1='180' y1='1056' x2='1580' y2='1056' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1051' font-size='11' font-family='monospace'>S8 B8 help</text>
+<line x1='180' y1='1080' x2='1580' y2='1080' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1075' font-size='11' font-family='monospace'>S12 B3 help</text>
+<line x1='180' y1='1104' x2='1580' y2='1104' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1099' font-size='11' font-family='monospace'>S12 B8 help</text>
+<line x1='180' y1='1128' x2='1580' y2='1128' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1123' font-size='11' font-family='monospace'>S12 B13 help</text>
+<line x1='180' y1='1152' x2='1580' y2='1152' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1147' font-size='11' font-family='monospace'>S16 B5 help</text>
+<line x1='180' y1='1176' x2='1580' y2='1176' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1171' font-size='11' font-family='monospace'>S16 B9 help</text>
+<line x1='180' y1='1200' x2='1580' y2='1200' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1195' font-size='11' font-family='monospace'>S16 B12 help</text>
+<line x1='180' y1='1224' x2='1580' y2='1224' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1219' font-size='11' font-family='monospace'>S3 B3 help</text>
+<line x1='180' y1='1248' x2='1580' y2='1248' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1243' font-size='11' font-family='monospace'>S3 B5 help</text>
+<line x1='180' y1='1272' x2='1580' y2='1272' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1267' font-size='11' font-family='monospace'>S3 B6 help</text>
+<line x1='180' y1='1296' x2='1580' y2='1296' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1291' font-size='11' font-family='monospace'>S3 B9 help</text>
+<line x1='180' y1='1320' x2='1580' y2='1320' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1315' font-size='11' font-family='monospace'>S14 B1 help</text>
+<line x1='180' y1='1344' x2='1580' y2='1344' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1339' font-size='11' font-family='monospace'>S14 B8 help</text>
+<line x1='180' y1='1368' x2='1580' y2='1368' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1363' font-size='11' font-family='monospace'>S14 B10 help</text>
+<line x1='180' y1='1392' x2='1580' y2='1392' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1387' font-size='11' font-family='monospace'>S4 B1 help</text>
+<line x1='180' y1='1416' x2='1580' y2='1416' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1411' font-size='11' font-family='monospace'>S4 B4 help</text>
+<line x1='180' y1='1440' x2='1580' y2='1440' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1435' font-size='11' font-family='monospace'>S4 B6 help</text>
+<line x1='180' y1='1464' x2='1580' y2='1464' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1459' font-size='11' font-family='monospace'>S4 B8 help</text>
+<line x1='180' y1='1488' x2='1580' y2='1488' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1483' font-size='11' font-family='monospace'>S20 B2 help</text>
+<line x1='180' y1='1512' x2='1580' y2='1512' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1507' font-size='11' font-family='monospace'>S20 B3 help</text>
+<line x1='180' y1='1536' x2='1580' y2='1536' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1531' font-size='11' font-family='monospace'>S21 B1 main</text>
+<line x1='180' y1='1560' x2='1580' y2='1560' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1555' font-size='11' font-family='monospace'>S12 B0 main</text>
+<line x1='180' y1='1584' x2='1580' y2='1584' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1579' font-size='11' font-family='monospace'>S9 B6 help</text>
+<line x1='180' y1='1608' x2='1580' y2='1608' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1603' font-size='11' font-family='monospace'>S9 B10 help</text>
+<line x1='180' y1='1632' x2='1580' y2='1632' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1627' font-size='11' font-family='monospace'>S9 B12 help</text>
+<line x1='180' y1='1656' x2='1580' y2='1656' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1651' font-size='11' font-family='monospace'>S20 B0 help</text>
+<line x1='180' y1='1680' x2='1580' y2='1680' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1675' font-size='11' font-family='monospace'>S20 B9 help</text>
+<line x1='180' y1='1704' x2='1580' y2='1704' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1699' font-size='11' font-family='monospace'>S16 B0 help</text>
+<line x1='180' y1='1728' x2='1580' y2='1728' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1723' font-size='11' font-family='monospace'>S16 B2 help</text>
+<line x1='180' y1='1752' x2='1580' y2='1752' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1747' font-size='11' font-family='monospace'>S8 B3 main</text>
+<line x1='180' y1='1776' x2='1580' y2='1776' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1771' font-size='11' font-family='monospace'>S14 B5 main</text>
+<line x1='180' y1='1800' x2='1580' y2='1800' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1795' font-size='11' font-family='monospace'>S4 B7 main</text>
+<line x1='180' y1='1824' x2='1580' y2='1824' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1819' font-size='11' font-family='monospace'>S3 B7 main</text>
+<line x1='180' y1='1848' x2='1580' y2='1848' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1843' font-size='11' font-family='monospace'>S16 B8 main</text>
+<line x1='180' y1='1872' x2='1580' y2='1872' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1867' font-size='11' font-family='monospace'>S9 B4 main</text>
+<line x1='180' y1='1896' x2='1580' y2='1896' stroke='#efefef' stroke-width='1'/>
+<text x='8' y='1891' font-size='11' font-family='monospace'>S20 B6 main</text>
+<rect x='183.76' y='152' width='37.13' height='14' fill='#2E86DE' opacity='0.85'><title>#3 r0 4->3 prepare [0.13s]</title></rect>
+<rect x='183.76' y='152' width='20.14' height='14' fill='#D6EAF8' opacity='0.92'><title>#3 r0 4->3 prepare / Help Intra Read: 0.07s</title></rect>
+<rect x='203.90' y='152' width='7.94' height='14' fill='#F8C471' opacity='0.92'><title>#3 r0 4->3 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.76' y='176' width='37.13' height='14' fill='#2E86DE' opacity='0.85'><title>#3 r0 4->3 prepare [0.13s]</title></rect>
+<rect x='183.76' y='176' width='20.14' height='14' fill='#D6EAF8' opacity='0.92'><title>#3 r0 4->3 prepare / Help Intra Read: 0.07s</title></rect>
+<rect x='203.90' y='176' width='7.94' height='14' fill='#F8C471' opacity='0.92'><title>#3 r0 4->3 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.76' y='200' width='37.13' height='14' fill='#2E86DE' opacity='0.85'><title>#3 r0 4->3 prepare [0.13s]</title></rect>
+<rect x='183.76' y='200' width='20.14' height='14' fill='#D6EAF8' opacity='0.92'><title>#3 r0 4->3 prepare / Help Intra Read: 0.07s</title></rect>
+<rect x='203.90' y='200' width='7.94' height='14' fill='#F8C471' opacity='0.92'><title>#3 r0 4->3 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.57' y='224' width='51.94' height='14' fill='#2E86DE' opacity='0.85'><title>#1 r0 5->1 prepare [0.18s]</title></rect>
+<rect x='183.57' y='224' width='22.92' height='14' fill='#D6EAF8' opacity='0.92'><title>#1 r0 5->1 prepare / Help Intra Read: 0.08s</title></rect>
+<rect x='206.49' y='224' width='7.50' height='14' fill='#F8C471' opacity='0.92'><title>#1 r0 5->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.57' y='248' width='51.94' height='14' fill='#2E86DE' opacity='0.85'><title>#1 r0 5->1 prepare [0.18s]</title></rect>
+<rect x='183.57' y='248' width='22.92' height='14' fill='#D6EAF8' opacity='0.92'><title>#1 r0 5->1 prepare / Help Intra Read: 0.08s</title></rect>
+<rect x='206.49' y='248' width='7.50' height='14' fill='#F8C471' opacity='0.92'><title>#1 r0 5->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.57' y='272' width='51.94' height='14' fill='#2E86DE' opacity='0.85'><title>#1 r0 5->1 prepare [0.18s]</title></rect>
+<rect x='183.57' y='272' width='22.92' height='14' fill='#D6EAF8' opacity='0.92'><title>#1 r0 5->1 prepare / Help Intra Read: 0.08s</title></rect>
+<rect x='206.49' y='272' width='7.50' height='14' fill='#F8C471' opacity='0.92'><title>#1 r0 5->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.78' y='296' width='52.04' height='14' fill='#2E86DE' opacity='0.85'><title>#5 r0 2->5 prepare [0.18s]</title></rect>
+<rect x='183.78' y='296' width='27.35' height='14' fill='#D6EAF8' opacity='0.92'><title>#5 r0 2->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='211.13' y='296' width='11.93' height='14' fill='#F8C471' opacity='0.92'><title>#5 r0 2->5 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='183.78' y='320' width='52.04' height='14' fill='#2E86DE' opacity='0.85'><title>#5 r0 2->5 prepare [0.18s]</title></rect>
+<rect x='183.78' y='320' width='27.35' height='14' fill='#D6EAF8' opacity='0.92'><title>#5 r0 2->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='211.13' y='320' width='11.93' height='14' fill='#F8C471' opacity='0.92'><title>#5 r0 2->5 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='183.78' y='344' width='52.04' height='14' fill='#2E86DE' opacity='0.85'><title>#5 r0 2->5 prepare [0.18s]</title></rect>
+<rect x='183.78' y='344' width='27.35' height='14' fill='#D6EAF8' opacity='0.92'><title>#5 r0 2->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='211.13' y='344' width='11.93' height='14' fill='#F8C471' opacity='0.92'><title>#5 r0 2->5 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='183.78' y='368' width='52.04' height='14' fill='#2E86DE' opacity='0.85'><title>#5 r0 2->5 prepare [0.18s]</title></rect>
+<rect x='183.78' y='368' width='27.35' height='14' fill='#D6EAF8' opacity='0.92'><title>#5 r0 2->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='211.13' y='368' width='11.93' height='14' fill='#F8C471' opacity='0.92'><title>#5 r0 2->5 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='183.77' y='392' width='65.30' height='14' fill='#2E86DE' opacity='0.85'><title>#4 r0 3->4 prepare [0.22s]</title></rect>
+<rect x='183.77' y='392' width='32.64' height='14' fill='#D6EAF8' opacity='0.92'><title>#4 r0 3->4 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='216.42' y='392' width='9.78' height='14' fill='#F8C471' opacity='0.92'><title>#4 r0 3->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.77' y='416' width='65.30' height='14' fill='#2E86DE' opacity='0.85'><title>#4 r0 3->4 prepare [0.22s]</title></rect>
+<rect x='183.77' y='416' width='32.64' height='14' fill='#D6EAF8' opacity='0.92'><title>#4 r0 3->4 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='216.42' y='416' width='9.78' height='14' fill='#F8C471' opacity='0.92'><title>#4 r0 3->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.77' y='440' width='65.30' height='14' fill='#2E86DE' opacity='0.85'><title>#4 r0 3->4 prepare [0.22s]</title></rect>
+<rect x='183.77' y='440' width='32.64' height='14' fill='#D6EAF8' opacity='0.92'><title>#4 r0 3->4 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='216.42' y='440' width='9.78' height='14' fill='#F8C471' opacity='0.92'><title>#4 r0 3->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.77' y='464' width='65.30' height='14' fill='#2E86DE' opacity='0.85'><title>#4 r0 3->4 prepare [0.22s]</title></rect>
+<rect x='183.77' y='464' width='32.64' height='14' fill='#D6EAF8' opacity='0.92'><title>#4 r0 3->4 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='216.42' y='464' width='9.78' height='14' fill='#F8C471' opacity='0.92'><title>#4 r0 3->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.75' y='488' width='70.08' height='14' fill='#2E86DE' opacity='0.85'><title>#2 r0 1->2 prepare [0.24s]</title></rect>
+<rect x='183.75' y='488' width='40.11' height='14' fill='#D6EAF8' opacity='0.92'><title>#2 r0 1->2 prepare / Help Intra Read: 0.14s</title></rect>
+<rect x='223.86' y='488' width='8.39' height='14' fill='#F8C471' opacity='0.92'><title>#2 r0 1->2 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.75' y='512' width='70.08' height='14' fill='#2E86DE' opacity='0.85'><title>#2 r0 1->2 prepare [0.24s]</title></rect>
+<rect x='183.75' y='512' width='40.11' height='14' fill='#D6EAF8' opacity='0.92'><title>#2 r0 1->2 prepare / Help Intra Read: 0.14s</title></rect>
+<rect x='223.86' y='512' width='8.39' height='14' fill='#F8C471' opacity='0.92'><title>#2 r0 1->2 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='183.75' y='536' width='70.08' height='14' fill='#2E86DE' opacity='0.85'><title>#2 r0 1->2 prepare [0.24s]</title></rect>
+<rect x='183.75' y='536' width='40.11' height='14' fill='#D6EAF8' opacity='0.92'><title>#2 r0 1->2 prepare / Help Intra Read: 0.14s</title></rect>
+<rect x='223.86' y='536' width='8.39' height='14' fill='#F8C471' opacity='0.92'><title>#2 r0 1->2 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.03' y='560' width='34.28' height='14' fill='#E67E22' opacity='0.85'><title>#12 r1 4->3 prepare [0.12s]</title></rect>
+<rect x='254.03' y='560' width='17.41' height='14' fill='#D6EAF8' opacity='0.92'><title>#12 r1 4->3 prepare / Help Intra Read: 0.06s</title></rect>
+<rect x='271.44' y='560' width='7.78' height='14' fill='#F8C471' opacity='0.92'><title>#12 r1 4->3 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.03' y='584' width='34.28' height='14' fill='#E67E22' opacity='0.85'><title>#12 r1 4->3 prepare [0.12s]</title></rect>
+<rect x='254.03' y='584' width='17.41' height='14' fill='#D6EAF8' opacity='0.92'><title>#12 r1 4->3 prepare / Help Intra Read: 0.06s</title></rect>
+<rect x='271.44' y='584' width='7.78' height='14' fill='#F8C471' opacity='0.92'><title>#12 r1 4->3 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.03' y='608' width='34.28' height='14' fill='#E67E22' opacity='0.85'><title>#12 r1 4->3 prepare [0.12s]</title></rect>
+<rect x='254.03' y='608' width='17.41' height='14' fill='#D6EAF8' opacity='0.92'><title>#12 r1 4->3 prepare / Help Intra Read: 0.06s</title></rect>
+<rect x='271.44' y='608' width='7.78' height='14' fill='#F8C471' opacity='0.92'><title>#12 r1 4->3 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.07' y='632' width='47.00' height='14' fill='#E67E22' opacity='0.85'><title>#13 r1 2->4 prepare [0.16s]</title></rect>
+<rect x='254.07' y='632' width='24.85' height='14' fill='#D6EAF8' opacity='0.92'><title>#13 r1 2->4 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='278.92' y='632' width='9.96' height='14' fill='#F8C471' opacity='0.92'><title>#13 r1 2->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.07' y='656' width='47.00' height='14' fill='#E67E22' opacity='0.85'><title>#13 r1 2->4 prepare [0.16s]</title></rect>
+<rect x='254.07' y='656' width='24.85' height='14' fill='#D6EAF8' opacity='0.92'><title>#13 r1 2->4 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='278.92' y='656' width='9.96' height='14' fill='#F8C471' opacity='0.92'><title>#13 r1 2->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.07' y='680' width='47.00' height='14' fill='#E67E22' opacity='0.85'><title>#13 r1 2->4 prepare [0.16s]</title></rect>
+<rect x='254.07' y='680' width='24.85' height='14' fill='#D6EAF8' opacity='0.92'><title>#13 r1 2->4 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='278.92' y='680' width='9.96' height='14' fill='#F8C471' opacity='0.92'><title>#13 r1 2->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.07' y='704' width='47.00' height='14' fill='#E67E22' opacity='0.85'><title>#13 r1 2->4 prepare [0.16s]</title></rect>
+<rect x='254.07' y='704' width='24.85' height='14' fill='#D6EAF8' opacity='0.92'><title>#13 r1 2->4 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='278.92' y='704' width='9.96' height='14' fill='#F8C471' opacity='0.92'><title>#13 r1 2->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.20' y='728' width='51.74' height='14' fill='#E67E22' opacity='0.85'><title>#14 r1 3->5 prepare [0.18s]</title></rect>
+<rect x='254.20' y='728' width='25.59' height='14' fill='#D6EAF8' opacity='0.92'><title>#14 r1 3->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='279.80' y='728' width='7.35' height='14' fill='#F8C471' opacity='0.92'><title>#14 r1 3->5 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.20' y='752' width='51.74' height='14' fill='#E67E22' opacity='0.85'><title>#14 r1 3->5 prepare [0.18s]</title></rect>
+<rect x='254.20' y='752' width='25.59' height='14' fill='#D6EAF8' opacity='0.92'><title>#14 r1 3->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='279.80' y='752' width='7.35' height='14' fill='#F8C471' opacity='0.92'><title>#14 r1 3->5 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='254.20' y='776' width='51.74' height='14' fill='#E67E22' opacity='0.85'><title>#14 r1 3->5 prepare [0.18s]</title></rect>
+<rect x='254.20' y='776' width='25.59' height='14' fill='#D6EAF8' opacity='0.92'><title>#14 r1 3->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='279.80' y='776' width='7.35' height='14' fill='#F8C471' opacity='0.92'><title>#14 r1 3->5 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='253.99' y='800' width='58.57' height='14' fill='#E67E22' opacity='0.85'><title>#11 r1 5->1 prepare [0.20s]</title></rect>
+<rect x='253.99' y='800' width='29.05' height='14' fill='#D6EAF8' opacity='0.92'><title>#11 r1 5->1 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='283.04' y='800' width='9.15' height='14' fill='#F8C471' opacity='0.92'><title>#11 r1 5->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='253.99' y='824' width='58.57' height='14' fill='#E67E22' opacity='0.85'><title>#11 r1 5->1 prepare [0.20s]</title></rect>
+<rect x='253.99' y='824' width='29.05' height='14' fill='#D6EAF8' opacity='0.92'><title>#11 r1 5->1 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='283.04' y='824' width='9.15' height='14' fill='#F8C471' opacity='0.92'><title>#11 r1 5->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='253.99' y='848' width='58.57' height='14' fill='#E67E22' opacity='0.85'><title>#11 r1 5->1 prepare [0.20s]</title></rect>
+<rect x='253.99' y='848' width='29.05' height='14' fill='#D6EAF8' opacity='0.92'><title>#11 r1 5->1 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='283.04' y='848' width='9.15' height='14' fill='#F8C471' opacity='0.92'><title>#11 r1 5->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='253.99' y='872' width='58.57' height='14' fill='#E67E22' opacity='0.85'><title>#11 r1 5->1 prepare [0.20s]</title></rect>
+<rect x='253.99' y='872' width='29.05' height='14' fill='#D6EAF8' opacity='0.92'><title>#11 r1 5->1 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='283.04' y='872' width='9.15' height='14' fill='#F8C471' opacity='0.92'><title>#11 r1 5->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='253.95' y='392' width='145.30' height='14' fill='#2E86DE' opacity='0.85'><title>#9 r0 3->4 send [0.50s]</title></rect>
+<rect x='253.95' y='392' width='143.87' height='14' fill='#5DADE2' opacity='0.92'><title>#9 r0 3->4 send / Help Cross Send: 0.49s</title></rect>
+<text x='256.95' y='403' font-size='9' font-family='monospace' fill='#111'>#9 r0 3->4 send</text>
+<rect x='253.95' y='416' width='145.30' height='14' fill='#2E86DE' opacity='0.85'><title>#9 r0 3->4 send [0.50s]</title></rect>
+<rect x='253.95' y='416' width='143.87' height='14' fill='#5DADE2' opacity='0.92'><title>#9 r0 3->4 send / Help Cross Send: 0.49s</title></rect>
+<text x='256.95' y='427' font-size='9' font-family='monospace' fill='#111'>#9 r0 3->4 send</text>
+<rect x='253.95' y='440' width='145.30' height='14' fill='#2E86DE' opacity='0.85'><title>#9 r0 3->4 send [0.50s]</title></rect>
+<rect x='253.95' y='440' width='143.87' height='14' fill='#5DADE2' opacity='0.92'><title>#9 r0 3->4 send / Help Cross Send: 0.49s</title></rect>
+<text x='256.95' y='451' font-size='9' font-family='monospace' fill='#111'>#9 r0 3->4 send</text>
+<rect x='253.95' y='464' width='145.30' height='14' fill='#2E86DE' opacity='0.85'><title>#9 r0 3->4 send [0.50s]</title></rect>
+<rect x='253.95' y='464' width='143.87' height='14' fill='#5DADE2' opacity='0.92'><title>#9 r0 3->4 send / Help Cross Send: 0.49s</title></rect>
+<text x='256.95' y='475' font-size='9' font-family='monospace' fill='#111'>#9 r0 3->4 send</text>
+<rect x='253.93' y='224' width='207.79' height='14' fill='#2E86DE' opacity='0.85'><title>#6 r0 5->1 send [0.71s]</title></rect>
+<rect x='253.93' y='224' width='206.69' height='14' fill='#5DADE2' opacity='0.92'><title>#6 r0 5->1 send / Help Cross Send: 0.71s</title></rect>
+<text x='256.93' y='235' font-size='9' font-family='monospace' fill='#111'>#6 r0 5->1 send</text>
+<rect x='253.93' y='248' width='207.79' height='14' fill='#2E86DE' opacity='0.85'><title>#6 r0 5->1 send [0.71s]</title></rect>
+<rect x='253.93' y='248' width='206.69' height='14' fill='#5DADE2' opacity='0.92'><title>#6 r0 5->1 send / Help Cross Send: 0.71s</title></rect>
+<text x='256.93' y='259' font-size='9' font-family='monospace' fill='#111'>#6 r0 5->1 send</text>
+<rect x='253.93' y='272' width='207.79' height='14' fill='#2E86DE' opacity='0.85'><title>#6 r0 5->1 send [0.71s]</title></rect>
+<rect x='253.93' y='272' width='206.69' height='14' fill='#5DADE2' opacity='0.92'><title>#6 r0 5->1 send / Help Cross Send: 0.71s</title></rect>
+<text x='256.93' y='283' font-size='9' font-family='monospace' fill='#111'>#6 r0 5->1 send</text>
+<rect x='253.97' y='296' width='209.09' height='14' fill='#2E86DE' opacity='0.85'><title>#10 r0 2->5 send [0.72s]</title></rect>
+<rect x='253.97' y='296' width='208.81' height='14' fill='#5DADE2' opacity='0.92'><title>#10 r0 2->5 send / Help Cross Send: 0.71s</title></rect>
+<text x='256.97' y='307' font-size='9' font-family='monospace' fill='#111'>#10 r0 2->5 send</text>
+<rect x='253.97' y='320' width='209.09' height='14' fill='#2E86DE' opacity='0.85'><title>#10 r0 2->5 send [0.72s]</title></rect>
+<rect x='253.97' y='320' width='208.81' height='14' fill='#5DADE2' opacity='0.92'><title>#10 r0 2->5 send / Help Cross Send: 0.71s</title></rect>
+<text x='256.97' y='331' font-size='9' font-family='monospace' fill='#111'>#10 r0 2->5 send</text>
+<rect x='253.97' y='344' width='209.09' height='14' fill='#2E86DE' opacity='0.85'><title>#10 r0 2->5 send [0.72s]</title></rect>
+<rect x='253.97' y='344' width='208.81' height='14' fill='#5DADE2' opacity='0.92'><title>#10 r0 2->5 send / Help Cross Send: 0.71s</title></rect>
+<text x='256.97' y='355' font-size='9' font-family='monospace' fill='#111'>#10 r0 2->5 send</text>
+<rect x='253.97' y='368' width='209.09' height='14' fill='#2E86DE' opacity='0.85'><title>#10 r0 2->5 send [0.72s]</title></rect>
+<rect x='253.97' y='368' width='208.81' height='14' fill='#5DADE2' opacity='0.92'><title>#10 r0 2->5 send / Help Cross Send: 0.71s</title></rect>
+<text x='256.97' y='379' font-size='9' font-family='monospace' fill='#111'>#10 r0 2->5 send</text>
+<rect x='253.95' y='152' width='234.66' height='14' fill='#2E86DE' opacity='0.85'><title>#8 r0 4->3 send [0.80s]</title></rect>
+<rect x='253.95' y='152' width='234.32' height='14' fill='#5DADE2' opacity='0.92'><title>#8 r0 4->3 send / Help Cross Send: 0.80s</title></rect>
+<text x='256.95' y='163' font-size='9' font-family='monospace' fill='#111'>#8 r0 4->3 send</text>
+<rect x='253.95' y='176' width='234.66' height='14' fill='#2E86DE' opacity='0.85'><title>#8 r0 4->3 send [0.80s]</title></rect>
+<rect x='253.95' y='176' width='234.32' height='14' fill='#5DADE2' opacity='0.92'><title>#8 r0 4->3 send / Help Cross Send: 0.80s</title></rect>
+<text x='256.95' y='187' font-size='9' font-family='monospace' fill='#111'>#8 r0 4->3 send</text>
+<rect x='253.95' y='200' width='234.66' height='14' fill='#2E86DE' opacity='0.85'><title>#8 r0 4->3 send [0.80s]</title></rect>
+<rect x='253.95' y='200' width='234.32' height='14' fill='#5DADE2' opacity='0.92'><title>#8 r0 4->3 send / Help Cross Send: 0.80s</title></rect>
+<text x='256.95' y='211' font-size='9' font-family='monospace' fill='#111'>#8 r0 4->3 send</text>
+<rect x='253.94' y='488' width='673.78' height='14' fill='#2E86DE' opacity='0.85'><title>#7 r0 1->2 send [2.31s]</title></rect>
+<rect x='253.94' y='488' width='672.30' height='14' fill='#5DADE2' opacity='0.92'><title>#7 r0 1->2 send / Help Cross Send: 2.30s</title></rect>
+<text x='256.94' y='499' font-size='9' font-family='monospace' fill='#111'>#7 r0 1->2 send</text>
+<rect x='253.94' y='512' width='673.78' height='14' fill='#2E86DE' opacity='0.85'><title>#7 r0 1->2 send [2.31s]</title></rect>
+<rect x='253.94' y='512' width='672.30' height='14' fill='#5DADE2' opacity='0.92'><title>#7 r0 1->2 send / Help Cross Send: 2.30s</title></rect>
+<text x='256.94' y='523' font-size='9' font-family='monospace' fill='#111'>#7 r0 1->2 send</text>
+<rect x='253.94' y='536' width='673.78' height='14' fill='#2E86DE' opacity='0.85'><title>#7 r0 1->2 send [2.31s]</title></rect>
+<rect x='253.94' y='536' width='672.30' height='14' fill='#5DADE2' opacity='0.92'><title>#7 r0 1->2 send / Help Cross Send: 2.30s</title></rect>
+<text x='256.94' y='547' font-size='9' font-family='monospace' fill='#111'>#7 r0 1->2 send</text>
+<rect x='928.00' y='896' width='32.64' height='14' fill='#16A085' opacity='0.85'><title>#22 r2 4->5 prepare [0.11s]</title></rect>
+<rect x='928.00' y='896' width='17.07' height='14' fill='#D6EAF8' opacity='0.92'><title>#22 r2 4->5 prepare / Help Intra Read: 0.06s</title></rect>
+<rect x='945.08' y='896' width='7.42' height='14' fill='#F8C471' opacity='0.92'><title>#22 r2 4->5 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='928.00' y='920' width='32.64' height='14' fill='#16A085' opacity='0.85'><title>#22 r2 4->5 prepare [0.11s]</title></rect>
+<rect x='928.00' y='920' width='17.07' height='14' fill='#D6EAF8' opacity='0.92'><title>#22 r2 4->5 prepare / Help Intra Read: 0.06s</title></rect>
+<rect x='945.08' y='920' width='7.42' height='14' fill='#F8C471' opacity='0.92'><title>#22 r2 4->5 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='928.00' y='944' width='32.64' height='14' fill='#16A085' opacity='0.85'><title>#22 r2 4->5 prepare [0.11s]</title></rect>
+<rect x='928.00' y='944' width='17.07' height='14' fill='#D6EAF8' opacity='0.92'><title>#22 r2 4->5 prepare / Help Intra Read: 0.06s</title></rect>
+<rect x='945.08' y='944' width='7.42' height='14' fill='#F8C471' opacity='0.92'><title>#22 r2 4->5 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='927.97' y='968' width='51.17' height='14' fill='#16A085' opacity='0.85'><title>#20 r2 2->3 prepare [0.18s]</title></rect>
+<rect x='927.97' y='968' width='25.70' height='14' fill='#D6EAF8' opacity='0.92'><title>#20 r2 2->3 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='953.67' y='968' width='10.77' height='14' fill='#F8C471' opacity='0.92'><title>#20 r2 2->3 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='927.97' y='992' width='51.17' height='14' fill='#16A085' opacity='0.85'><title>#20 r2 2->3 prepare [0.18s]</title></rect>
+<rect x='927.97' y='992' width='25.70' height='14' fill='#D6EAF8' opacity='0.92'><title>#20 r2 2->3 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='953.67' y='992' width='10.77' height='14' fill='#F8C471' opacity='0.92'><title>#20 r2 2->3 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='927.97' y='1016' width='51.17' height='14' fill='#16A085' opacity='0.85'><title>#20 r2 2->3 prepare [0.18s]</title></rect>
+<rect x='927.97' y='1016' width='25.70' height='14' fill='#D6EAF8' opacity='0.92'><title>#20 r2 2->3 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='953.67' y='1016' width='10.77' height='14' fill='#F8C471' opacity='0.92'><title>#20 r2 2->3 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='927.97' y='1040' width='51.17' height='14' fill='#16A085' opacity='0.85'><title>#20 r2 2->3 prepare [0.18s]</title></rect>
+<rect x='927.97' y='1040' width='25.70' height='14' fill='#D6EAF8' opacity='0.92'><title>#20 r2 2->3 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='953.67' y='1040' width='10.77' height='14' fill='#F8C471' opacity='0.92'><title>#20 r2 2->3 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='927.99' y='1064' width='59.94' height='14' fill='#16A085' opacity='0.85'><title>#21 r2 3->4 prepare [0.21s]</title></rect>
+<rect x='927.99' y='1064' width='29.27' height='14' fill='#D6EAF8' opacity='0.92'><title>#21 r2 3->4 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='957.26' y='1064' width='7.96' height='14' fill='#F8C471' opacity='0.92'><title>#21 r2 3->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='927.99' y='1088' width='59.94' height='14' fill='#16A085' opacity='0.85'><title>#21 r2 3->4 prepare [0.21s]</title></rect>
+<rect x='927.99' y='1088' width='29.27' height='14' fill='#D6EAF8' opacity='0.92'><title>#21 r2 3->4 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='957.26' y='1088' width='7.96' height='14' fill='#F8C471' opacity='0.92'><title>#21 r2 3->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='927.99' y='1112' width='59.94' height='14' fill='#16A085' opacity='0.85'><title>#21 r2 3->4 prepare [0.21s]</title></rect>
+<rect x='927.99' y='1112' width='29.27' height='14' fill='#D6EAF8' opacity='0.92'><title>#21 r2 3->4 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='957.26' y='1112' width='7.96' height='14' fill='#F8C471' opacity='0.92'><title>#21 r2 3->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='927.81' y='1136' width='61.53' height='14' fill='#16A085' opacity='0.85'><title>#19 r2 5->2 prepare [0.21s]</title></rect>
+<rect x='927.81' y='1136' width='30.54' height='14' fill='#D6EAF8' opacity='0.92'><title>#19 r2 5->2 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='958.35' y='1136' width='7.75' height='14' fill='#F8C471' opacity='0.92'><title>#19 r2 5->2 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='927.81' y='1160' width='61.53' height='14' fill='#16A085' opacity='0.85'><title>#19 r2 5->2 prepare [0.21s]</title></rect>
+<rect x='927.81' y='1160' width='30.54' height='14' fill='#D6EAF8' opacity='0.92'><title>#19 r2 5->2 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='958.35' y='1160' width='7.75' height='14' fill='#F8C471' opacity='0.92'><title>#19 r2 5->2 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='927.81' y='1184' width='61.53' height='14' fill='#16A085' opacity='0.85'><title>#19 r2 5->2 prepare [0.21s]</title></rect>
+<rect x='927.81' y='1184' width='30.54' height='14' fill='#D6EAF8' opacity='0.92'><title>#19 r2 5->2 prepare / Help Intra Read: 0.10s</title></rect>
+<rect x='958.35' y='1184' width='7.75' height='14' fill='#F8C471' opacity='0.92'><title>#19 r2 5->2 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='927.78' y='560' width='79.72' height='14' fill='#E67E22' opacity='0.85'><title>#16 r1 4->3 send [0.27s]</title></rect>
+<rect x='927.78' y='560' width='79.46' height='14' fill='#5DADE2' opacity='0.92'><title>#16 r1 4->3 send / Help Cross Send: 0.27s</title></rect>
+<rect x='927.78' y='584' width='79.72' height='14' fill='#E67E22' opacity='0.85'><title>#16 r1 4->3 send [0.27s]</title></rect>
+<rect x='927.78' y='584' width='79.46' height='14' fill='#5DADE2' opacity='0.92'><title>#16 r1 4->3 send / Help Cross Send: 0.27s</title></rect>
+<rect x='927.78' y='608' width='79.72' height='14' fill='#E67E22' opacity='0.85'><title>#16 r1 4->3 send [0.27s]</title></rect>
+<rect x='927.78' y='608' width='79.46' height='14' fill='#5DADE2' opacity='0.92'><title>#16 r1 4->3 send / Help Cross Send: 0.27s</title></rect>
+<rect x='927.79' y='728' width='88.98' height='14' fill='#E67E22' opacity='0.85'><title>#18 r1 3->5 send [0.30s]</title></rect>
+<rect x='927.79' y='728' width='87.28' height='14' fill='#5DADE2' opacity='0.92'><title>#18 r1 3->5 send / Help Cross Send: 0.30s</title></rect>
+<text x='930.79' y='739' font-size='9' font-family='monospace' fill='#111'>#18 r1 3->5 send</text>
+<rect x='927.79' y='752' width='88.98' height='14' fill='#E67E22' opacity='0.85'><title>#18 r1 3->5 send [0.30s]</title></rect>
+<rect x='927.79' y='752' width='87.28' height='14' fill='#5DADE2' opacity='0.92'><title>#18 r1 3->5 send / Help Cross Send: 0.30s</title></rect>
+<text x='930.79' y='763' font-size='9' font-family='monospace' fill='#111'>#18 r1 3->5 send</text>
+<rect x='927.79' y='776' width='88.98' height='14' fill='#E67E22' opacity='0.85'><title>#18 r1 3->5 send [0.30s]</title></rect>
+<rect x='927.79' y='776' width='87.28' height='14' fill='#5DADE2' opacity='0.92'><title>#18 r1 3->5 send / Help Cross Send: 0.30s</title></rect>
+<text x='930.79' y='787' font-size='9' font-family='monospace' fill='#111'>#18 r1 3->5 send</text>
+<rect x='927.79' y='632' width='90.19' height='14' fill='#E67E22' opacity='0.85'><title>#17 r1 2->4 send [0.31s]</title></rect>
+<rect x='927.79' y='632' width='89.67' height='14' fill='#5DADE2' opacity='0.92'><title>#17 r1 2->4 send / Help Cross Send: 0.31s</title></rect>
+<text x='930.79' y='643' font-size='9' font-family='monospace' fill='#111'>#17 r1 2->4 send</text>
+<rect x='927.79' y='656' width='90.19' height='14' fill='#E67E22' opacity='0.85'><title>#17 r1 2->4 send [0.31s]</title></rect>
+<rect x='927.79' y='656' width='89.67' height='14' fill='#5DADE2' opacity='0.92'><title>#17 r1 2->4 send / Help Cross Send: 0.31s</title></rect>
+<text x='930.79' y='667' font-size='9' font-family='monospace' fill='#111'>#17 r1 2->4 send</text>
+<rect x='927.79' y='680' width='90.19' height='14' fill='#E67E22' opacity='0.85'><title>#17 r1 2->4 send [0.31s]</title></rect>
+<rect x='927.79' y='680' width='89.67' height='14' fill='#5DADE2' opacity='0.92'><title>#17 r1 2->4 send / Help Cross Send: 0.31s</title></rect>
+<text x='930.79' y='691' font-size='9' font-family='monospace' fill='#111'>#17 r1 2->4 send</text>
+<rect x='927.79' y='704' width='90.19' height='14' fill='#E67E22' opacity='0.85'><title>#17 r1 2->4 send [0.31s]</title></rect>
+<rect x='927.79' y='704' width='89.67' height='14' fill='#5DADE2' opacity='0.92'><title>#17 r1 2->4 send / Help Cross Send: 0.31s</title></rect>
+<text x='930.79' y='715' font-size='9' font-family='monospace' fill='#111'>#17 r1 2->4 send</text>
+<rect x='927.77' y='800' width='96.73' height='14' fill='#E67E22' opacity='0.85'><title>#15 r1 5->1 send [0.33s]</title></rect>
+<rect x='927.77' y='800' width='94.56' height='14' fill='#5DADE2' opacity='0.92'><title>#15 r1 5->1 send / Help Cross Send: 0.32s</title></rect>
+<text x='930.77' y='811' font-size='9' font-family='monospace' fill='#111'>#15 r1 5->1 send</text>
+<rect x='927.77' y='824' width='96.73' height='14' fill='#E67E22' opacity='0.85'><title>#15 r1 5->1 send [0.33s]</title></rect>
+<rect x='927.77' y='824' width='94.56' height='14' fill='#5DADE2' opacity='0.92'><title>#15 r1 5->1 send / Help Cross Send: 0.32s</title></rect>
+<text x='930.77' y='835' font-size='9' font-family='monospace' fill='#111'>#15 r1 5->1 send</text>
+<rect x='927.77' y='848' width='96.73' height='14' fill='#E67E22' opacity='0.85'><title>#15 r1 5->1 send [0.33s]</title></rect>
+<rect x='927.77' y='848' width='94.56' height='14' fill='#5DADE2' opacity='0.92'><title>#15 r1 5->1 send / Help Cross Send: 0.32s</title></rect>
+<text x='930.77' y='859' font-size='9' font-family='monospace' fill='#111'>#15 r1 5->1 send</text>
+<rect x='927.77' y='872' width='96.73' height='14' fill='#E67E22' opacity='0.85'><title>#15 r1 5->1 send [0.33s]</title></rect>
+<rect x='927.77' y='872' width='94.56' height='14' fill='#5DADE2' opacity='0.92'><title>#15 r1 5->1 send / Help Cross Send: 0.32s</title></rect>
+<text x='930.77' y='883' font-size='9' font-family='monospace' fill='#111'>#15 r1 5->1 send</text>
+<rect x='1024.59' y='1208' width='38.78' height='14' fill='#8E44AD' opacity='0.85'><title>#27 r3 4->1 prepare [0.13s]</title></rect>
+<rect x='1024.59' y='1208' width='22.08' height='14' fill='#D6EAF8' opacity='0.92'><title>#27 r3 4->1 prepare / Help Intra Read: 0.08s</title></rect>
+<rect x='1046.68' y='1208' width='9.00' height='14' fill='#F8C471' opacity='0.92'><title>#27 r3 4->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1024.59' y='1232' width='38.78' height='14' fill='#8E44AD' opacity='0.85'><title>#27 r3 4->1 prepare [0.13s]</title></rect>
+<rect x='1024.59' y='1232' width='22.08' height='14' fill='#D6EAF8' opacity='0.92'><title>#27 r3 4->1 prepare / Help Intra Read: 0.08s</title></rect>
+<rect x='1046.68' y='1232' width='9.00' height='14' fill='#F8C471' opacity='0.92'><title>#27 r3 4->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1024.59' y='1256' width='38.78' height='14' fill='#8E44AD' opacity='0.85'><title>#27 r3 4->1 prepare [0.13s]</title></rect>
+<rect x='1024.59' y='1256' width='22.08' height='14' fill='#D6EAF8' opacity='0.92'><title>#27 r3 4->1 prepare / Help Intra Read: 0.08s</title></rect>
+<rect x='1046.68' y='1256' width='9.00' height='14' fill='#F8C471' opacity='0.92'><title>#27 r3 4->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1024.59' y='1280' width='38.78' height='14' fill='#8E44AD' opacity='0.85'><title>#27 r3 4->1 prepare [0.13s]</title></rect>
+<rect x='1024.59' y='1280' width='22.08' height='14' fill='#D6EAF8' opacity='0.92'><title>#27 r3 4->1 prepare / Help Intra Read: 0.08s</title></rect>
+<rect x='1046.68' y='1280' width='9.00' height='14' fill='#F8C471' opacity='0.92'><title>#27 r3 4->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1024.62' y='1304' width='54.47' height='14' fill='#8E44AD' opacity='0.85'><title>#29 r3 1->4 prepare [0.19s]</title></rect>
+<rect x='1024.62' y='1304' width='27.67' height='14' fill='#D6EAF8' opacity='0.92'><title>#29 r3 1->4 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='1052.29' y='1304' width='7.43' height='14' fill='#F8C471' opacity='0.92'><title>#29 r3 1->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1024.62' y='1328' width='54.47' height='14' fill='#8E44AD' opacity='0.85'><title>#29 r3 1->4 prepare [0.19s]</title></rect>
+<rect x='1024.62' y='1328' width='27.67' height='14' fill='#D6EAF8' opacity='0.92'><title>#29 r3 1->4 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='1052.29' y='1328' width='7.43' height='14' fill='#F8C471' opacity='0.92'><title>#29 r3 1->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1024.62' y='1352' width='54.47' height='14' fill='#8E44AD' opacity='0.85'><title>#29 r3 1->4 prepare [0.19s]</title></rect>
+<rect x='1024.62' y='1352' width='27.67' height='14' fill='#D6EAF8' opacity='0.92'><title>#29 r3 1->4 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='1052.29' y='1352' width='7.43' height='14' fill='#F8C471' opacity='0.92'><title>#29 r3 1->4 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1024.63' y='1376' width='57.79' height='14' fill='#8E44AD' opacity='0.85'><title>#30 r3 3->5 prepare [0.20s]</title></rect>
+<rect x='1024.63' y='1376' width='27.43' height='14' fill='#D6EAF8' opacity='0.92'><title>#30 r3 3->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='1052.07' y='1376' width='10.62' height='14' fill='#F8C471' opacity='0.92'><title>#30 r3 3->5 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='1024.63' y='1400' width='57.79' height='14' fill='#8E44AD' opacity='0.85'><title>#30 r3 3->5 prepare [0.20s]</title></rect>
+<rect x='1024.63' y='1400' width='27.43' height='14' fill='#D6EAF8' opacity='0.92'><title>#30 r3 3->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='1052.07' y='1400' width='10.62' height='14' fill='#F8C471' opacity='0.92'><title>#30 r3 3->5 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='1024.63' y='1424' width='57.79' height='14' fill='#8E44AD' opacity='0.85'><title>#30 r3 3->5 prepare [0.20s]</title></rect>
+<rect x='1024.63' y='1424' width='27.43' height='14' fill='#D6EAF8' opacity='0.92'><title>#30 r3 3->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='1052.07' y='1424' width='10.62' height='14' fill='#F8C471' opacity='0.92'><title>#30 r3 3->5 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='1024.63' y='1448' width='57.79' height='14' fill='#8E44AD' opacity='0.85'><title>#30 r3 3->5 prepare [0.20s]</title></rect>
+<rect x='1024.63' y='1448' width='27.43' height='14' fill='#D6EAF8' opacity='0.92'><title>#30 r3 3->5 prepare / Help Intra Read: 0.09s</title></rect>
+<rect x='1052.07' y='1448' width='10.62' height='14' fill='#F8C471' opacity='0.92'><title>#30 r3 3->5 prepare / Help Partial Encode: 0.04s</title></rect>
+<rect x='1024.60' y='1472' width='63.13' height='14' fill='#8E44AD' opacity='0.85'><title>#28 r3 5->3 prepare [0.22s]</title></rect>
+<rect x='1024.60' y='1472' width='31.38' height='14' fill='#D6EAF8' opacity='0.92'><title>#28 r3 5->3 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='1055.99' y='1472' width='5.34' height='14' fill='#F8C471' opacity='0.92'><title>#28 r3 5->3 prepare / Help Partial Encode: 0.02s</title></rect>
+<rect x='1024.60' y='1496' width='63.13' height='14' fill='#8E44AD' opacity='0.85'><title>#28 r3 5->3 prepare [0.22s]</title></rect>
+<rect x='1024.60' y='1496' width='31.38' height='14' fill='#D6EAF8' opacity='0.92'><title>#28 r3 5->3 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='1055.99' y='1496' width='5.34' height='14' fill='#F8C471' opacity='0.92'><title>#28 r3 5->3 prepare / Help Partial Encode: 0.02s</title></rect>
+<rect x='183.42' y='1520' width='905.81' height='14' fill='#E74C3C' opacity='0.85'><title>main cluster=4 [3.10s]</title></rect>
+<rect x='183.42' y='1520' width='850.48' height='14' fill='#2E86DE' opacity='0.92'><title>main cluster=4 / Main Cross Receive: 2.91s</title></rect>
+<rect x='1033.89' y='1520' width='24.66' height='14' fill='#F5B041' opacity='0.92'><title>main cluster=4 / Main Decode: 0.08s</title></rect>
+<rect x='1058.55' y='1520' width='23.05' height='14' fill='#AF7AC5' opacity='0.92'><title>main cluster=4 / Main Write Back: 0.08s</title></rect>
+<text x='186.42' y='1531' font-size='9' font-family='monospace' fill='#111'>main cluster=4</text>
+<rect x='1024.56' y='1136' width='158.46' height='14' fill='#16A085' opacity='0.85'><title>#23 r2 5->2 send [0.54s]</title></rect>
+<rect x='1024.56' y='1136' width='156.74' height='14' fill='#5DADE2' opacity='0.92'><title>#23 r2 5->2 send / Help Cross Send: 0.54s</title></rect>
+<text x='1027.56' y='1147' font-size='9' font-family='monospace' fill='#111'>#23 r2 5->2 send</text>
+<rect x='1024.56' y='1160' width='158.46' height='14' fill='#16A085' opacity='0.85'><title>#23 r2 5->2 send [0.54s]</title></rect>
+<rect x='1024.56' y='1160' width='156.74' height='14' fill='#5DADE2' opacity='0.92'><title>#23 r2 5->2 send / Help Cross Send: 0.54s</title></rect>
+<text x='1027.56' y='1171' font-size='9' font-family='monospace' fill='#111'>#23 r2 5->2 send</text>
+<rect x='1024.56' y='1184' width='158.46' height='14' fill='#16A085' opacity='0.85'><title>#23 r2 5->2 send [0.54s]</title></rect>
+<rect x='1024.56' y='1184' width='156.74' height='14' fill='#5DADE2' opacity='0.92'><title>#23 r2 5->2 send / Help Cross Send: 0.54s</title></rect>
+<text x='1027.56' y='1195' font-size='9' font-family='monospace' fill='#111'>#23 r2 5->2 send</text>
+<rect x='1024.57' y='1064' width='177.17' height='14' fill='#16A085' opacity='0.85'><title>#25 r2 3->4 send [0.61s]</title></rect>
+<rect x='1024.57' y='1064' width='175.76' height='14' fill='#5DADE2' opacity='0.92'><title>#25 r2 3->4 send / Help Cross Send: 0.60s</title></rect>
+<text x='1027.57' y='1075' font-size='9' font-family='monospace' fill='#111'>#25 r2 3->4 send</text>
+<rect x='1024.57' y='1088' width='177.17' height='14' fill='#16A085' opacity='0.85'><title>#25 r2 3->4 send [0.61s]</title></rect>
+<rect x='1024.57' y='1088' width='175.76' height='14' fill='#5DADE2' opacity='0.92'><title>#25 r2 3->4 send / Help Cross Send: 0.60s</title></rect>
+<text x='1027.57' y='1099' font-size='9' font-family='monospace' fill='#111'>#25 r2 3->4 send</text>
+<rect x='1024.57' y='1112' width='177.17' height='14' fill='#16A085' opacity='0.85'><title>#25 r2 3->4 send [0.61s]</title></rect>
+<rect x='1024.57' y='1112' width='175.76' height='14' fill='#5DADE2' opacity='0.92'><title>#25 r2 3->4 send / Help Cross Send: 0.60s</title></rect>
+<text x='1027.57' y='1123' font-size='9' font-family='monospace' fill='#111'>#25 r2 3->4 send</text>
+<rect x='1024.58' y='896' width='194.37' height='14' fill='#16A085' opacity='0.85'><title>#26 r2 4->5 send [0.67s]</title></rect>
+<rect x='1024.58' y='896' width='194.17' height='14' fill='#5DADE2' opacity='0.92'><title>#26 r2 4->5 send / Help Cross Send: 0.66s</title></rect>
+<text x='1027.58' y='907' font-size='9' font-family='monospace' fill='#111'>#26 r2 4->5 send</text>
+<rect x='1024.58' y='920' width='194.37' height='14' fill='#16A085' opacity='0.85'><title>#26 r2 4->5 send [0.67s]</title></rect>
+<rect x='1024.58' y='920' width='194.17' height='14' fill='#5DADE2' opacity='0.92'><title>#26 r2 4->5 send / Help Cross Send: 0.66s</title></rect>
+<text x='1027.58' y='931' font-size='9' font-family='monospace' fill='#111'>#26 r2 4->5 send</text>
+<rect x='1024.58' y='944' width='194.37' height='14' fill='#16A085' opacity='0.85'><title>#26 r2 4->5 send [0.67s]</title></rect>
+<rect x='1024.58' y='944' width='194.17' height='14' fill='#5DADE2' opacity='0.92'><title>#26 r2 4->5 send / Help Cross Send: 0.66s</title></rect>
+<text x='1027.58' y='955' font-size='9' font-family='monospace' fill='#111'>#26 r2 4->5 send</text>
+<rect x='1024.57' y='968' width='199.20' height='14' fill='#16A085' opacity='0.85'><title>#24 r2 2->3 send [0.68s]</title></rect>
+<rect x='1024.57' y='968' width='199.01' height='14' fill='#5DADE2' opacity='0.92'><title>#24 r2 2->3 send / Help Cross Send: 0.68s</title></rect>
+<text x='1027.57' y='979' font-size='9' font-family='monospace' fill='#111'>#24 r2 2->3 send</text>
+<rect x='1024.57' y='992' width='199.20' height='14' fill='#16A085' opacity='0.85'><title>#24 r2 2->3 send [0.68s]</title></rect>
+<rect x='1024.57' y='992' width='199.01' height='14' fill='#5DADE2' opacity='0.92'><title>#24 r2 2->3 send / Help Cross Send: 0.68s</title></rect>
+<text x='1027.57' y='1003' font-size='9' font-family='monospace' fill='#111'>#24 r2 2->3 send</text>
+<rect x='1024.57' y='1016' width='199.20' height='14' fill='#16A085' opacity='0.85'><title>#24 r2 2->3 send [0.68s]</title></rect>
+<rect x='1024.57' y='1016' width='199.01' height='14' fill='#5DADE2' opacity='0.92'><title>#24 r2 2->3 send / Help Cross Send: 0.68s</title></rect>
+<text x='1027.57' y='1027' font-size='9' font-family='monospace' fill='#111'>#24 r2 2->3 send</text>
+<rect x='1024.57' y='1040' width='199.20' height='14' fill='#16A085' opacity='0.85'><title>#24 r2 2->3 send [0.68s]</title></rect>
+<rect x='1024.57' y='1040' width='199.01' height='14' fill='#5DADE2' opacity='0.92'><title>#24 r2 2->3 send / Help Cross Send: 0.68s</title></rect>
+<text x='1027.57' y='1051' font-size='9' font-family='monospace' fill='#111'>#24 r2 2->3 send</text>
+<rect x='183.26' y='1544' width='1051.35' height='14' fill='#E74C3C' opacity='0.85'><title>main cluster=3 [3.60s]</title></rect>
+<rect x='183.26' y='1544' width='1022.18' height='14' fill='#2E86DE' opacity='0.92'><title>main cluster=3 / Main Cross Receive: 3.50s</title></rect>
+<rect x='1205.43' y='1544' width='12.75' height='14' fill='#F5B041' opacity='0.92'><title>main cluster=3 / Main Decode: 0.04s</title></rect>
+<rect x='1218.19' y='1544' width='15.36' height='14' fill='#AF7AC5' opacity='0.92'><title>main cluster=3 / Main Write Back: 0.05s</title></rect>
+<text x='186.26' y='1555' font-size='9' font-family='monospace' fill='#111'>main cluster=3</text>
+<rect x='1223.87' y='1568' width='34.22' height='14' fill='#C0392B' opacity='0.85'><title>#35 r4 4->1 prepare [0.12s]</title></rect>
+<rect x='1223.87' y='1568' width='18.62' height='14' fill='#D6EAF8' opacity='0.92'><title>#35 r4 4->1 prepare / Help Intra Read: 0.06s</title></rect>
+<rect x='1242.50' y='1568' width='7.38' height='14' fill='#F8C471' opacity='0.92'><title>#35 r4 4->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1223.87' y='1592' width='34.22' height='14' fill='#C0392B' opacity='0.85'><title>#35 r4 4->1 prepare [0.12s]</title></rect>
+<rect x='1223.87' y='1592' width='18.62' height='14' fill='#D6EAF8' opacity='0.92'><title>#35 r4 4->1 prepare / Help Intra Read: 0.06s</title></rect>
+<rect x='1242.50' y='1592' width='7.38' height='14' fill='#F8C471' opacity='0.92'><title>#35 r4 4->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1223.87' y='1616' width='34.22' height='14' fill='#C0392B' opacity='0.85'><title>#35 r4 4->1 prepare [0.12s]</title></rect>
+<rect x='1223.87' y='1616' width='18.62' height='14' fill='#D6EAF8' opacity='0.92'><title>#35 r4 4->1 prepare / Help Intra Read: 0.06s</title></rect>
+<rect x='1242.50' y='1616' width='7.38' height='14' fill='#F8C471' opacity='0.92'><title>#35 r4 4->1 prepare / Help Partial Encode: 0.03s</title></rect>
+<rect x='1223.97' y='1640' width='57.95' height='14' fill='#C0392B' opacity='0.85'><title>#37 r4 1->3 prepare [0.20s]</title></rect>
+<rect x='1223.97' y='1640' width='32.25' height='14' fill='#D6EAF8' opacity='0.92'><title>#37 r4 1->3 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='1256.22' y='1640' width='5.11' height='14' fill='#F8C471' opacity='0.92'><title>#37 r4 1->3 prepare / Help Partial Encode: 0.02s</title></rect>
+<rect x='1223.97' y='1664' width='57.95' height='14' fill='#C0392B' opacity='0.85'><title>#37 r4 1->3 prepare [0.20s]</title></rect>
+<rect x='1223.97' y='1664' width='32.25' height='14' fill='#D6EAF8' opacity='0.92'><title>#37 r4 1->3 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='1256.22' y='1664' width='5.11' height='14' fill='#F8C471' opacity='0.92'><title>#37 r4 1->3 prepare / Help Partial Encode: 0.02s</title></rect>
+<rect x='1223.96' y='1688' width='60.44' height='14' fill='#C0392B' opacity='0.85'><title>#36 r4 3->2 prepare [0.21s]</title></rect>
+<rect x='1223.96' y='1688' width='31.29' height='14' fill='#D6EAF8' opacity='0.92'><title>#36 r4 3->2 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='1255.24' y='1688' width='5.46' height='14' fill='#F8C471' opacity='0.92'><title>#36 r4 3->2 prepare / Help Partial Encode: 0.02s</title></rect>
+<rect x='1223.96' y='1712' width='60.44' height='14' fill='#C0392B' opacity='0.85'><title>#36 r4 3->2 prepare [0.21s]</title></rect>
+<rect x='1223.96' y='1712' width='31.29' height='14' fill='#D6EAF8' opacity='0.92'><title>#36 r4 3->2 prepare / Help Intra Read: 0.11s</title></rect>
+<rect x='1255.24' y='1712' width='5.46' height='14' fill='#F8C471' opacity='0.92'><title>#36 r4 3->2 prepare / Help Partial Encode: 0.02s</title></rect>
+<rect x='183.39' y='1736' width='1112.62' height='14' fill='#E74C3C' opacity='0.85'><title>main cluster=2 [3.81s]</title></rect>
+<rect x='183.39' y='1736' width='1055.19' height='14' fill='#2E86DE' opacity='0.92'><title>main cluster=2 / Main Cross Receive: 3.61s</title></rect>
+<rect x='1238.58' y='1736' width='24.56' height='14' fill='#F5B041' opacity='0.92'><title>main cluster=2 / Main Decode: 0.08s</title></rect>
+<rect x='1263.13' y='1736' width='27.56' height='14' fill='#AF7AC5' opacity='0.92'><title>main cluster=2 / Main Write Back: 0.09s</title></rect>
+<text x='186.39' y='1747' font-size='9' font-family='monospace' fill='#111'>main cluster=2</text>
+<rect x='1223.85' y='1304' width='83.68' height='14' fill='#8E44AD' opacity='0.85'><title>#33 r3 1->4 send [0.29s]</title></rect>
+<rect x='1223.85' y='1304' width='82.42' height='14' fill='#5DADE2' opacity='0.92'><title>#33 r3 1->4 send / Help Cross Send: 0.28s</title></rect>
+<text x='1226.85' y='1315' font-size='9' font-family='monospace' fill='#111'>#33 r3 1->4 send</text>
+<rect x='1223.85' y='1328' width='83.68' height='14' fill='#8E44AD' opacity='0.85'><title>#33 r3 1->4 send [0.29s]</title></rect>
+<rect x='1223.85' y='1328' width='82.42' height='14' fill='#5DADE2' opacity='0.92'><title>#33 r3 1->4 send / Help Cross Send: 0.28s</title></rect>
+<text x='1226.85' y='1339' font-size='9' font-family='monospace' fill='#111'>#33 r3 1->4 send</text>
+<rect x='1223.85' y='1352' width='83.68' height='14' fill='#8E44AD' opacity='0.85'><title>#33 r3 1->4 send [0.29s]</title></rect>
+<rect x='1223.85' y='1352' width='82.42' height='14' fill='#5DADE2' opacity='0.92'><title>#33 r3 1->4 send / Help Cross Send: 0.28s</title></rect>
+<text x='1226.85' y='1363' font-size='9' font-family='monospace' fill='#111'>#33 r3 1->4 send</text>
+<rect x='1223.84' y='1472' width='91.28' height='14' fill='#8E44AD' opacity='0.85'><title>#32 r3 5->3 send [0.31s]</title></rect>
+<rect x='1223.84' y='1472' width='89.57' height='14' fill='#5DADE2' opacity='0.92'><title>#32 r3 5->3 send / Help Cross Send: 0.31s</title></rect>
+<text x='1226.84' y='1483' font-size='9' font-family='monospace' fill='#111'>#32 r3 5->3 send</text>
+<rect x='1223.84' y='1496' width='91.28' height='14' fill='#8E44AD' opacity='0.85'><title>#32 r3 5->3 send [0.31s]</title></rect>
+<rect x='1223.84' y='1496' width='89.57' height='14' fill='#5DADE2' opacity='0.92'><title>#32 r3 5->3 send / Help Cross Send: 0.31s</title></rect>
+<text x='1226.84' y='1507' font-size='9' font-family='monospace' fill='#111'>#32 r3 5->3 send</text>
+<rect x='1223.86' y='1376' width='98.51' height='14' fill='#8E44AD' opacity='0.85'><title>#34 r3 3->5 send [0.34s]</title></rect>
+<rect x='1223.86' y='1376' width='96.71' height='14' fill='#5DADE2' opacity='0.92'><title>#34 r3 3->5 send / Help Cross Send: 0.33s</title></rect>
+<text x='1226.86' y='1387' font-size='9' font-family='monospace' fill='#111'>#34 r3 3->5 send</text>
+<rect x='1223.86' y='1400' width='98.51' height='14' fill='#8E44AD' opacity='0.85'><title>#34 r3 3->5 send [0.34s]</title></rect>
+<rect x='1223.86' y='1400' width='96.71' height='14' fill='#5DADE2' opacity='0.92'><title>#34 r3 3->5 send / Help Cross Send: 0.33s</title></rect>
+<text x='1226.86' y='1411' font-size='9' font-family='monospace' fill='#111'>#34 r3 3->5 send</text>
+<rect x='1223.86' y='1424' width='98.51' height='14' fill='#8E44AD' opacity='0.85'><title>#34 r3 3->5 send [0.34s]</title></rect>
+<rect x='1223.86' y='1424' width='96.71' height='14' fill='#5DADE2' opacity='0.92'><title>#34 r3 3->5 send / Help Cross Send: 0.33s</title></rect>
+<text x='1226.86' y='1435' font-size='9' font-family='monospace' fill='#111'>#34 r3 3->5 send</text>
+<rect x='1223.86' y='1448' width='98.51' height='14' fill='#8E44AD' opacity='0.85'><title>#34 r3 3->5 send [0.34s]</title></rect>
+<rect x='1223.86' y='1448' width='96.71' height='14' fill='#5DADE2' opacity='0.92'><title>#34 r3 3->5 send / Help Cross Send: 0.33s</title></rect>
+<text x='1226.86' y='1459' font-size='9' font-family='monospace' fill='#111'>#34 r3 3->5 send</text>
+<rect x='1223.84' y='1208' width='131.93' height='14' fill='#8E44AD' opacity='0.85'><title>#31 r3 4->1 send [0.45s]</title></rect>
+<rect x='1223.84' y='1208' width='131.67' height='14' fill='#5DADE2' opacity='0.92'><title>#31 r3 4->1 send / Help Cross Send: 0.45s</title></rect>
+<text x='1226.84' y='1219' font-size='9' font-family='monospace' fill='#111'>#31 r3 4->1 send</text>
+<rect x='1223.84' y='1232' width='131.93' height='14' fill='#8E44AD' opacity='0.85'><title>#31 r3 4->1 send [0.45s]</title></rect>
+<rect x='1223.84' y='1232' width='131.67' height='14' fill='#5DADE2' opacity='0.92'><title>#31 r3 4->1 send / Help Cross Send: 0.45s</title></rect>
+<text x='1226.84' y='1243' font-size='9' font-family='monospace' fill='#111'>#31 r3 4->1 send</text>
+<rect x='1223.84' y='1256' width='131.93' height='14' fill='#8E44AD' opacity='0.85'><title>#31 r3 4->1 send [0.45s]</title></rect>
+<rect x='1223.84' y='1256' width='131.67' height='14' fill='#5DADE2' opacity='0.92'><title>#31 r3 4->1 send / Help Cross Send: 0.45s</title></rect>
+<text x='1226.84' y='1267' font-size='9' font-family='monospace' fill='#111'>#31 r3 4->1 send</text>
+<rect x='1223.84' y='1280' width='131.93' height='14' fill='#8E44AD' opacity='0.85'><title>#31 r3 4->1 send [0.45s]</title></rect>
+<rect x='1223.84' y='1280' width='131.67' height='14' fill='#5DADE2' opacity='0.92'><title>#31 r3 4->1 send / Help Cross Send: 0.45s</title></rect>
+<text x='1226.84' y='1291' font-size='9' font-family='monospace' fill='#111'>#31 r3 4->1 send</text>
+<rect x='183.28' y='1760' width='1178.08' height='14' fill='#E74C3C' opacity='0.85'><title>main cluster=3 [4.03s]</title></rect>
+<rect x='183.28' y='1760' width='766.76' height='14' fill='#A9CCE3' opacity='0.92'><title>main cluster=3 / Main Intra Read: 2.62s</title></rect>
+<rect x='950.04' y='1760' width='366.95' height='14' fill='#2E86DE' opacity='0.92'><title>main cluster=3 / Main Cross Receive: 1.26s</title></rect>
+<rect x='1316.99' y='1760' width='29.45' height='14' fill='#F5B041' opacity='0.92'><title>main cluster=3 / Main Decode: 0.10s</title></rect>
+<rect x='1346.44' y='1760' width='14.04' height='14' fill='#AF7AC5' opacity='0.92'><title>main cluster=3 / Main Write Back: 0.05s</title></rect>
+<text x='186.28' y='1771' font-size='9' font-family='monospace' fill='#111'>main cluster=3</text>
+<rect x='183.27' y='1784' width='1199.20' height='14' fill='#E74C3C' opacity='0.85'><title>main cluster=4 [4.10s]</title></rect>
+<rect x='183.27' y='1784' width='1150.98' height='14' fill='#2E86DE' opacity='0.92'><title>main cluster=4 / Main Cross Receive: 3.94s</title></rect>
+<rect x='1334.25' y='1784' width='22.73' height='14' fill='#F5B041' opacity='0.92'><title>main cluster=4 / Main Decode: 0.08s</title></rect>
+<rect x='1356.98' y='1784' width='20.94' height='14' fill='#AF7AC5' opacity='0.92'><title>main cluster=4 / Main Write Back: 0.07s</title></rect>
+<text x='186.27' y='1795' font-size='9' font-family='monospace' fill='#111'>main cluster=4</text>
+<rect x='1355.82' y='1568' width='83.16' height='14' fill='#C0392B' opacity='0.85'><title>#38 r4 4->1 send [0.28s]</title></rect>
+<rect x='1355.82' y='1568' width='82.96' height='14' fill='#5DADE2' opacity='0.92'><title>#38 r4 4->1 send / Help Cross Send: 0.28s</title></rect>
+<text x='1358.82' y='1579' font-size='9' font-family='monospace' fill='#111'>#38 r4 4->1 send</text>
+<rect x='1355.82' y='1592' width='83.16' height='14' fill='#C0392B' opacity='0.85'><title>#38 r4 4->1 send [0.28s]</title></rect>
+<rect x='1355.82' y='1592' width='82.96' height='14' fill='#5DADE2' opacity='0.92'><title>#38 r4 4->1 send / Help Cross Send: 0.28s</title></rect>
+<text x='1358.82' y='1603' font-size='9' font-family='monospace' fill='#111'>#38 r4 4->1 send</text>
+<rect x='1355.82' y='1616' width='83.16' height='14' fill='#C0392B' opacity='0.85'><title>#38 r4 4->1 send [0.28s]</title></rect>
+<rect x='1355.82' y='1616' width='82.96' height='14' fill='#5DADE2' opacity='0.92'><title>#38 r4 4->1 send / Help Cross Send: 0.28s</title></rect>
+<text x='1358.82' y='1627' font-size='9' font-family='monospace' fill='#111'>#38 r4 4->1 send</text>
+<rect x='1355.83' y='1688' width='85.35' height='14' fill='#C0392B' opacity='0.85'><title>#39 r4 3->2 send [0.29s]</title></rect>
+<rect x='1355.83' y='1688' width='82.76' height='14' fill='#5DADE2' opacity='0.92'><title>#39 r4 3->2 send / Help Cross Send: 0.28s</title></rect>
+<text x='1358.83' y='1699' font-size='9' font-family='monospace' fill='#111'>#39 r4 3->2 send</text>
+<rect x='1355.83' y='1712' width='85.35' height='14' fill='#C0392B' opacity='0.85'><title>#39 r4 3->2 send [0.29s]</title></rect>
+<rect x='1355.83' y='1712' width='82.76' height='14' fill='#5DADE2' opacity='0.92'><title>#39 r4 3->2 send / Help Cross Send: 0.28s</title></rect>
+<text x='1358.83' y='1723' font-size='9' font-family='monospace' fill='#111'>#39 r4 3->2 send</text>
+<rect x='183.30' y='1808' width='1275.57' height='14' fill='#E74C3C' opacity='0.85'><title>main cluster=0 [4.37s]</title></rect>
+<rect x='183.30' y='1808' width='77.13' height='14' fill='#A9CCE3' opacity='0.92'><title>main cluster=0 / Main Intra Read: 0.26s</title></rect>
+<rect x='260.42' y='1808' width='1109.90' height='14' fill='#2E86DE' opacity='0.92'><title>main cluster=0 / Main Cross Receive: 3.80s</title></rect>
+<rect x='1370.32' y='1808' width='56.14' height='14' fill='#F5B041' opacity='0.92'><title>main cluster=0 / Main Decode: 0.19s</title></rect>
+<rect x='1426.47' y='1808' width='22.15' height='14' fill='#AF7AC5' opacity='0.92'><title>main cluster=0 / Main Write Back: 0.08s</title></rect>
+<text x='186.30' y='1819' font-size='9' font-family='monospace' fill='#111'>main cluster=0</text>
+<rect x='1355.84' y='1640' width='110.14' height='14' fill='#C0392B' opacity='0.85'><title>#40 r4 1->3 send [0.38s]</title></rect>
+<rect x='1355.84' y='1640' width='108.64' height='14' fill='#5DADE2' opacity='0.92'><title>#40 r4 1->3 send / Help Cross Send: 0.37s</title></rect>
+<text x='1358.84' y='1651' font-size='9' font-family='monospace' fill='#111'>#40 r4 1->3 send</text>
+<rect x='1355.84' y='1664' width='110.14' height='14' fill='#C0392B' opacity='0.85'><title>#40 r4 1->3 send [0.38s]</title></rect>
+<rect x='1355.84' y='1664' width='108.64' height='14' fill='#5DADE2' opacity='0.92'><title>#40 r4 1->3 send / Help Cross Send: 0.37s</title></rect>
+<text x='1358.84' y='1675' font-size='9' font-family='monospace' fill='#111'>#40 r4 1->3 send</text>
+<rect x='183.31' y='1832' width='1316.99' height='14' fill='#E74C3C' opacity='0.85'><title>main cluster=1 [4.51s]</title></rect>
+<rect x='183.31' y='1832' width='775.65' height='14' fill='#A9CCE3' opacity='0.92'><title>main cluster=1 / Main Intra Read: 2.65s</title></rect>
+<rect x='958.96' y='1832' width='487.74' height='14' fill='#2E86DE' opacity='0.92'><title>main cluster=1 / Main Cross Receive: 1.67s</title></rect>
+<rect x='1446.70' y='1832' width='34.77' height='14' fill='#F5B041' opacity='0.92'><title>main cluster=1 / Main Decode: 0.12s</title></rect>
+<rect x='1481.47' y='1832' width='17.52' height='14' fill='#AF7AC5' opacity='0.92'><title>main cluster=1 / Main Write Back: 0.06s</title></rect>
+<text x='186.31' y='1843' font-size='9' font-family='monospace' fill='#111'>main cluster=1</text>
+<rect x='183.27' y='1856' width='1370.77' height='14' fill='#E74C3C' opacity='0.85'><title>main cluster=0 [4.69s]</title></rect>
+<rect x='183.27' y='1856' width='70.49' height='14' fill='#A9CCE3' opacity='0.92'><title>main cluster=0 / Main Intra Read: 0.24s</title></rect>
+<rect x='253.76' y='1856' width='1211.72' height='14' fill='#2E86DE' opacity='0.92'><title>main cluster=0 / Main Cross Receive: 4.15s</title></rect>
+<rect x='1465.49' y='1856' width='55.50' height='14' fill='#F5B041' opacity='0.92'><title>main cluster=0 / Main Decode: 0.19s</title></rect>
+<rect x='1520.99' y='1856' width='21.96' height='14' fill='#AF7AC5' opacity='0.92'><title>main cluster=0 / Main Write Back: 0.08s</title></rect>
+<text x='186.27' y='1867' font-size='9' font-family='monospace' fill='#111'>main cluster=0</text>
+<rect x='183.34' y='1880' width='1396.66' height='14' fill='#E74C3C' opacity='0.85'><title>main cluster=2 [4.78s]</title></rect>
+<rect x='183.34' y='1880' width='703.38' height='14' fill='#A9CCE3' opacity='0.92'><title>main cluster=2 / Main Intra Read: 2.41s</title></rect>
+<rect x='886.72' y='1880' width='598.95' height='14' fill='#2E86DE' opacity='0.92'><title>main cluster=2 / Main Cross Receive: 2.05s</title></rect>
+<rect x='1485.66' y='1880' width='58.22' height='14' fill='#F5B041' opacity='0.92'><title>main cluster=2 / Main Decode: 0.20s</title></rect>
+<rect x='1543.88' y='1880' width='26.29' height='14' fill='#AF7AC5' opacity='0.92'><title>main cluster=2 / Main Write Back: 0.09s</title></rect>
+<text x='186.34' y='1891' font-size='9' font-family='monospace' fill='#111'>main cluster=2</text>
+<line x1='180.00' y1='50' x2='180.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='182.00' y='48' font-size='10' font-family='monospace'>0.00</text>
+<line x1='320.00' y1='50' x2='320.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='322.00' y='48' font-size='10' font-family='monospace'>0.48</text>
+<line x1='460.00' y1='50' x2='460.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='462.00' y='48' font-size='10' font-family='monospace'>0.96</text>
+<line x1='600.00' y1='50' x2='600.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='602.00' y='48' font-size='10' font-family='monospace'>1.44</text>
+<line x1='740.00' y1='50' x2='740.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='742.00' y='48' font-size='10' font-family='monospace'>1.92</text>
+<line x1='880.00' y1='50' x2='880.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='882.00' y='48' font-size='10' font-family='monospace'>2.40</text>
+<line x1='1020.00' y1='50' x2='1020.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='1022.00' y='48' font-size='10' font-family='monospace'>2.87</text>
+<line x1='1160.00' y1='50' x2='1160.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='1162.00' y='48' font-size='10' font-family='monospace'>3.35</text>
+<line x1='1300.00' y1='50' x2='1300.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='1302.00' y='48' font-size='10' font-family='monospace'>3.83</text>
+<line x1='1440.00' y1='50' x2='1440.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='1442.00' y='48' font-size='10' font-family='monospace'>4.31</text>
+<line x1='1580.00' y1='50' x2='1580.00' y2='1930' stroke='#ddd' stroke-width='1'/>
+<text x='1582.00' y='48' font-size='10' font-family='monospace'>4.79</text>
+</svg>

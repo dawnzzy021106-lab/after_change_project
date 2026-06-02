@@ -1,0 +1,9 @@
+/home/hadoop/zzy/ec_prototype-master/project/build/CMakeFiles/test_rs.dir
+/home/hadoop/zzy/ec_prototype-master/project/build/CMakeFiles/test_lrc.dir
+/home/hadoop/zzy/ec_prototype-master/project/build/CMakeFiles/test_pc.dir
+/home/hadoop/zzy/ec_prototype-master/project/build/CMakeFiles/run_coordinator.dir
+/home/hadoop/zzy/ec_prototype-master/project/build/CMakeFiles/run_proxy.dir
+/home/hadoop/zzy/ec_prototype-master/project/build/CMakeFiles/run_datanode.dir
+/home/hadoop/zzy/ec_prototype-master/project/build/CMakeFiles/run_client.dir
+/home/hadoop/zzy/ec_prototype-master/project/build/CMakeFiles/edit_cache.dir
+/home/hadoop/zzy/ec_prototype-master/project/build/CMakeFiles/rebuild_cache.dir
