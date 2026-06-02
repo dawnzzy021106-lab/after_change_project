@@ -31,6 +31,8 @@ namespace ECProject
     HelpRepairResp help_repair(HelpRepairPlan repair_plan);
     HelpRepairPrepareResp prepare_help_repair_data(HelpRepairPrepareReq req);
     HelpRepairSendResp send_prepared_help_repair_data(HelpRepairSendReq req);
+    HelpCrossWarmupResp receive_help_cross_warmup(HelpCrossWarmupReq req);
+    HelpCrossWarmupResp send_help_cross_warmup(HelpCrossWarmupReq req);
     // merge
     MainRecalResp main_recal(MainRecalPlan recal_plan);
     void help_recal(HelpRecalPlan recal_plan);

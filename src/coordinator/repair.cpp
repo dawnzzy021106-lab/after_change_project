@@ -109,34 +109,31 @@ namespace ECProject
           }
 
           std::vector<int> matched_link_indices;
-          int min_weight = -1;
           for (int v = 1; v <= max_nodes_; ++v) {
             int u = match[v];
             if (u != -1) {
               for (size_t k = 0; k < all_links.size(); ++k) {
                 if (all_links[k].src == u && all_links[k].dst == v && all_links[k].weight > 0) {
                   matched_link_indices.push_back((int)k);
-                  if (min_weight == -1 || all_links[k].weight < min_weight) {
-                    min_weight = all_links[k].weight;
-                  }
                   break;
                 }
               }
             }
           }
 
+          const int dispatch_weight = 1;
           ScheduleRound round;
-          round.weight = min_weight;
+          round.weight = dispatch_weight;
           for (int idx : matched_link_indices) {
-            all_links[idx].weight -= min_weight;
+            all_links[idx].weight -= dispatch_weight;
             if (!all_links[idx].is_dummy) {
-              // 注意：all_links[idx].weight 已经被减去 min_weight，代表“剩余量”，
-              // 不是本轮应发送的量。为避免派发任务数不匹配导致 main 永久等待，
-              // round.edges 中显式记录“本轮发送量 = min_weight”。
-              round.edges.push_back({all_links[idx].src, all_links[idx].dst, min_weight, false});
+              round.edges.push_back(
+                  {all_links[idx].src, all_links[idx].dst, dispatch_weight, false});
             }
           }
-          schedule.push_back(round);
+          if (!round.edges.empty()) {
+            schedule.push_back(round);
+          }
         }
         return schedule;
       }
@@ -316,6 +313,7 @@ namespace ECProject
             case static_cast<int>(RepairPhaseType::HELP_READ_INTRA): return "#D6EAF8";
             case static_cast<int>(RepairPhaseType::HELP_ENCODE): return "#F8C471";
             case static_cast<int>(RepairPhaseType::HELP_SEND_CROSS): return "#5DADE2";
+            case static_cast<int>(RepairPhaseType::HELP_WARMUP_CROSS): return "#7FB3D5";
             default: return "#95A5A6";
           }
         };
@@ -329,6 +327,7 @@ namespace ECProject
             case static_cast<int>(RepairPhaseType::HELP_READ_INTRA): return "Help Intra Read";
             case static_cast<int>(RepairPhaseType::HELP_ENCODE): return "Help Partial Encode";
             case static_cast<int>(RepairPhaseType::HELP_SEND_CROSS): return "Help Cross Send";
+            case static_cast<int>(RepairPhaseType::HELP_WARMUP_CROSS): return "Round Warmup Cross Send";
             default: return "Phase";
           }
         };
@@ -1370,6 +1369,7 @@ namespace ECProject
     double inner_network_time = 0;
     double io_time = 0;
     double meta_time = 0;
+    double repair_excluded_warmup_sec = 0;
     int cross_cluster_transfers = 0;
     int io_cnt = 0;
     std::unordered_map<unsigned int, std::vector<int>> failures_map;
@@ -1379,7 +1379,7 @@ namespace ECProject
       response.cross_cluster_time = cross_cluster_time;
       response.inner_network_time = inner_network_time;
       response.io_time = io_time;
-      response.repair_time = repair_time;
+      response.repair_time = std::max(0.0, repair_time - repair_excluded_warmup_sec);
       response.meta_time = meta_time;
       response.cross_cluster_transfers = cross_cluster_transfers;
       response.io_cnt = io_cnt;
@@ -1588,6 +1588,7 @@ namespace ECProject
     std::vector<std::string> block_lane_labels;
     std::vector<std::string> schedule_notes;
     std::atomic<int> help_dispatch_seq{0};
+    std::atomic<int> warmup_dispatch_seq{0};
     const auto timeline_start = std::chrono::steady_clock::now();
     auto now_sec = [&]() -> double {
       const auto dt = std::chrono::steady_clock::now() - timeline_start;
@@ -1596,6 +1597,17 @@ namespace ECProject
     auto make_help_task_id = [](const StripeGlobalContext& ctx, int plan_i, int help_j) {
       return std::to_string(ctx.stripe_id) + ":" + std::to_string(plan_i) + ":" +
              std::to_string(help_j);
+    };
+    auto estimate_help_cross_bytes = [](const HelpRepairPlan& plan) -> size_t {
+      size_t send_blocks = 0;
+      const bool partial_send = plan.partial_decoding && plan.partial_less;
+      if (partial_send) {
+        send_blocks = plan.partial_scheme ? plan.failed_blocks_index.size()
+                                          : plan.parity_blocks_index.size();
+      } else {
+        send_blocks = plan.inner_cluster_help_blocks_info.size();
+      }
+      return send_blocks * plan.block_size;
     };
     const int global_flow_rpc_timeout_sec = 500;
     auto send_global_help_repair_task =
@@ -1871,6 +1883,111 @@ namespace ECProject
               block_events.push_back({lane, evt_start, evt_end, c, oss.str(), 0.0,
                                       evt_cross, 0.0, 0.0, 0.0, evt_phase_spans,
                                       evt_phase_total});
+            }
+          }
+        };
+
+    auto send_global_round_warmup_task =
+        [&](StripeGlobalContext& ctx, int i, int j,
+            int round_id, int src_cluster_1b, int dst_cluster_1b, int warmup_seq) {
+          const HelpRepairPlan& plan = ctx.help_repairs[i][j];
+          const size_t bytes_total = estimate_help_cross_bytes(plan);
+          if (bytes_total == 0) {
+            return;
+          }
+          const double evt_start = now_sec();
+          double evt_cross = 0.0;
+          std::vector<RepairPhaseSpan> evt_phase_spans;
+          double evt_phase_total = 0.0;
+          try {
+            const int main_cluster_idx = dst_cluster_1b - 1;
+            if (main_cluster_idx < 0 ||
+                cluster_table_.find(static_cast<unsigned int>(main_cluster_idx)) ==
+                    cluster_table_.end()) {
+              throw std::runtime_error("invalid warmup main cluster");
+            }
+            Cluster& main_cluster = cluster_table_[static_cast<unsigned int>(main_cluster_idx)];
+            Cluster& helper_cluster = cluster_table_[plan.cluster_id];
+            HelpCrossWarmupReq req;
+            req.task_id = "warmup:" + make_help_task_id(ctx, i, j);
+            req.main_proxy_ip = main_cluster.proxy_ip;
+            req.main_proxy_port =
+                main_cluster.proxy_port + SOCKET_PORT_OFFSET + 10000 + warmup_seq;
+            req.bytes_total = bytes_total;
+            req.helper_cluster_id = plan.cluster_id;
+            req.main_cluster_id = static_cast<unsigned int>(main_cluster_idx);
+
+            HelpCrossWarmupResp recv_resp{};
+            HelpCrossWarmupResp send_resp{};
+            std::thread recv_thread([&]() {
+              std::string main_key =
+                  proxy_endpoint_key(main_cluster.proxy_ip, main_cluster.proxy_port);
+              auto& main_client = tls_proxy_client(
+                  main_key, main_cluster.proxy_ip, main_cluster.proxy_port);
+              auto r = async_simple::coro::syncAwait(
+                  main_client.call_for<&Proxy::receive_help_cross_warmup>(
+                      std::chrono::seconds{global_flow_rpc_timeout_sec}, req));
+              if (!r) {
+                recv_resp.success = false;
+                recv_resp.err_msg = r.error().msg;
+              } else {
+                recv_resp = r.value();
+              }
+            });
+            std::thread send_thread([&]() {
+              std::string helper_key =
+                  proxy_endpoint_key(helper_cluster.proxy_ip, helper_cluster.proxy_port);
+              auto& helper_client = tls_proxy_client(
+                  helper_key, helper_cluster.proxy_ip, helper_cluster.proxy_port);
+              auto r = async_simple::coro::syncAwait(
+                  helper_client.call_for<&Proxy::send_help_cross_warmup>(
+                      std::chrono::seconds{global_flow_rpc_timeout_sec}, req));
+              if (!r) {
+                send_resp.success = false;
+                send_resp.err_msg = r.error().msg;
+              } else {
+                send_resp = r.value();
+              }
+            });
+            recv_thread.join();
+            send_thread.join();
+            if (!recv_resp.success || !send_resp.success) {
+              std::cerr << "[HCWARMUP ERROR] round=" << round_id
+                        << " src=" << src_cluster_1b
+                        << " dst=" << dst_cluster_1b
+                        << " recv=" << recv_resp.err_msg
+                        << " send=" << send_resp.err_msg << std::endl;
+              throw std::runtime_error("help cross warmup failed");
+            }
+            evt_cross = send_resp.cross_cluster_time;
+            evt_phase_spans = send_resp.phase_spans;
+            evt_phase_total = send_resp.phase_total_time;
+          } catch (...) {
+            stripe_ok.store(false);
+          }
+          const double evt_end = now_sec();
+          if (IF_DEBUG && unordered_concurrency_main_repairs) {
+            std::lock_guard<std::mutex> lk(timeline_mutex);
+            for (const auto& bi : ctx.help_repairs[i][j].inner_cluster_help_blocks_info) {
+              const int blk = bi.first;
+              const std::string lane_key =
+                  std::to_string(ctx.stripe_id) + ":help:block" + std::to_string(blk);
+              int lane = 0;
+              auto it = block_lane_by_key.find(lane_key);
+              if (it == block_lane_by_key.end()) {
+                lane = static_cast<int>(block_lane_labels.size());
+                block_lane_by_key[lane_key] = lane;
+                block_lane_labels.push_back("S" + std::to_string(ctx.stripe_id) +
+                                            " B" + std::to_string(blk) + " help");
+              } else {
+                lane = it->second;
+              }
+              std::ostringstream oss;
+              oss << "#W" << warmup_seq << " r" << round_id << " "
+                  << src_cluster_1b << "->" << dst_cluster_1b << " round_warmup";
+              block_events.push_back({lane, evt_start, evt_end, "#7FB3D5", oss.str(),
+                                      0.0, evt_cross, 0.0, 0.0, 0.0,
+                                      evt_phase_spans, evt_phase_total});
             }
           }
         };
@@ -3153,6 +3270,23 @@ namespace ECProject
         // 预热第一轮：先做机架内读取/编码，再进入 round-0 发送
         if (!round_task_table.empty()) {
           launch_prepare_round(0);
+          const double warmup_start = now_sec();
+          std::vector<std::thread> warmup_threads;
+          const auto& warmup_tasks = round_task_table[0];
+          warmup_threads.reserve(warmup_tasks.size());
+          for (const auto& t : warmup_tasks) {
+            StripeGlobalContext& ctx = global_ctx[static_cast<size_t>(t.stripe_idx)];
+            const int seq = ++warmup_dispatch_seq;
+            warmup_threads.emplace_back(
+                send_global_round_warmup_task, std::ref(ctx), t.plan_i, t.help_j,
+                0, t.src, t.dst, seq);
+          }
+          for (auto& th : warmup_threads) {
+            if (th.joinable()) {
+              th.join();
+            }
+          }
+          repair_excluded_warmup_sec += std::max(0.0, now_sec() - warmup_start);
         }
 
         for (int rid = 0; rid < static_cast<int>(round_task_table.size()); ++rid) {

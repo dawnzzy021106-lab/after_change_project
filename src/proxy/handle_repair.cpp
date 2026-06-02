@@ -3,7 +3,9 @@
 #include <chrono>
 #include <memory>
 #include <mutex>
+#include <random>
 #include <sstream>
+#include <thread>
 
 namespace ECProject
 {
@@ -1232,6 +1234,136 @@ namespace ECProject
       write_help_cross_trace(trace);
     }
 
+    resp.phase_spans = std::move(phase_spans);
+    resp.phase_total_time = now_phase_sec();
+    return resp;
+  }
+
+  HelpCrossWarmupResp Proxy::receive_help_cross_warmup(HelpCrossWarmupReq req)
+  {
+    const auto phase_t0 = std::chrono::steady_clock::now();
+    auto now_phase_sec = [&]() -> double {
+      const auto dt = std::chrono::steady_clock::now() - phase_t0;
+      return std::chrono::duration_cast<std::chrono::duration<double>>(dt).count();
+    };
+    HelpCrossWarmupResp resp{};
+    std::vector<RepairPhaseSpan> phase_spans;
+    auto add_phase = [&](RepairPhaseType phase, double s, double e) {
+      if (e <= s) return;
+      phase_spans.push_back({static_cast<int>(phase), s, e});
+    };
+
+    try {
+      asio::ip::tcp::acceptor acceptor(io_context_);
+      asio::ip::tcp::endpoint endpoint(asio::ip::tcp::v4(), req.main_proxy_port);
+      acceptor.open(endpoint.protocol());
+      acceptor.set_option(asio::ip::tcp::acceptor::reuse_address(true));
+      acceptor.bind(endpoint);
+      acceptor.listen();
+      asio::ip::tcp::socket socket_(io_context_);
+      const double phase_start = now_phase_sec();
+      struct timeval start_time{}, end_time{};
+      gettimeofday(&start_time, NULL);
+      acceptor.accept(socket_);
+      std::vector<char> buf(kHelpCrossTraceChunkBytes);
+      size_t remaining = req.bytes_total;
+      while (remaining > 0) {
+        const size_t chunk = std::min(buf.size(), remaining);
+        asio::read(socket_, asio::buffer(buf.data(), chunk));
+        remaining -= chunk;
+      }
+      gettimeofday(&end_time, NULL);
+      resp.cross_cluster_time =
+          end_time.tv_sec - start_time.tv_sec +
+          (end_time.tv_usec - start_time.tv_usec) * 1.0 / 1000000;
+      add_phase(RepairPhaseType::HELP_WARMUP_CROSS, phase_start, now_phase_sec());
+      {
+        std::ostringstream trace;
+        trace << "[HCWARMUP_RECV] task_id=" << req.task_id
+              << " main_cluster=" << req.main_cluster_id
+              << " helper_cluster=" << req.helper_cluster_id
+              << " listen_port=" << req.main_proxy_port
+              << " bytes_total=" << req.bytes_total
+              << " cross_cluster_time=" << resp.cross_cluster_time;
+        write_help_cross_trace(trace);
+      }
+    } catch (const std::exception& e) {
+      resp.success = false;
+      resp.err_msg = e.what();
+    }
+    resp.phase_spans = std::move(phase_spans);
+    resp.phase_total_time = now_phase_sec();
+    return resp;
+  }
+
+  HelpCrossWarmupResp Proxy::send_help_cross_warmup(HelpCrossWarmupReq req)
+  {
+    const auto phase_t0 = std::chrono::steady_clock::now();
+    auto now_phase_sec = [&]() -> double {
+      const auto dt = std::chrono::steady_clock::now() - phase_t0;
+      return std::chrono::duration_cast<std::chrono::duration<double>>(dt).count();
+    };
+    HelpCrossWarmupResp resp{};
+    std::vector<RepairPhaseSpan> phase_spans;
+    auto add_phase = [&](RepairPhaseType phase, double s, double e) {
+      if (e <= s) return;
+      phase_spans.push_back({static_cast<int>(phase), s, e});
+    };
+
+    try {
+      std::vector<char> data(kHelpCrossTraceChunkBytes);
+      std::mt19937 rng(static_cast<unsigned int>(
+          std::chrono::steady_clock::now().time_since_epoch().count()));
+      std::uniform_int_distribution<int> dist(0, 255);
+      for (char& c : data) {
+        c = static_cast<char>(dist(rng));
+      }
+
+      asio::ip::tcp::socket socket_(io_context_);
+      asio::ip::tcp::resolver resolver(io_context_);
+      asio::error_code con_error;
+      auto endpoints = resolver.resolve(
+          asio::ip::tcp::resolver::query(req.main_proxy_ip,
+                                         std::to_string(req.main_proxy_port)));
+      const double phase_start = now_phase_sec();
+      struct timeval start_time{}, end_time{};
+      gettimeofday(&start_time, NULL);
+      for (int attempt = 0; attempt < 100; ++attempt) {
+        asio::error_code ignored;
+        socket_.close(ignored);
+        asio::connect(socket_, endpoints, con_error);
+        if (!con_error) break;
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+      }
+      if (con_error) {
+        resp.success = false;
+        resp.err_msg = con_error.message();
+        return resp;
+      }
+      size_t remaining = req.bytes_total;
+      while (remaining > 0) {
+        const size_t chunk = std::min(data.size(), remaining);
+        asio::write(socket_, asio::buffer(data.data(), chunk));
+        remaining -= chunk;
+      }
+      gettimeofday(&end_time, NULL);
+      resp.cross_cluster_time =
+          end_time.tv_sec - start_time.tv_sec +
+          (end_time.tv_usec - start_time.tv_usec) * 1.0 / 1000000;
+      add_phase(RepairPhaseType::HELP_WARMUP_CROSS, phase_start, now_phase_sec());
+      {
+        std::ostringstream trace;
+        trace << "[HCWARMUP_SEND] task_id=" << req.task_id
+              << " helper_cluster=" << req.helper_cluster_id
+              << " main_proxy=" << req.main_proxy_ip << ":" << req.main_proxy_port
+              << " bytes_total=" << req.bytes_total
+              << " cross_cluster_time=" << resp.cross_cluster_time;
+        write_help_cross_trace(trace);
+      }
+    } catch (const std::exception& e) {
+      resp.success = false;
+      resp.err_msg = e.what();
+    }
     resp.phase_spans = std::move(phase_spans);
     resp.phase_total_time = now_phase_sec();
     return resp;

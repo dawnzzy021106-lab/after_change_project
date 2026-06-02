@@ -20,6 +20,8 @@ namespace ECProject
     rpc_server_->register_handler<&Proxy::help_repair>(this);
     rpc_server_->register_handler<&Proxy::prepare_help_repair_data>(this);
     rpc_server_->register_handler<&Proxy::send_prepared_help_repair_data>(this);
+    rpc_server_->register_handler<&Proxy::receive_help_cross_warmup>(this);
+    rpc_server_->register_handler<&Proxy::send_help_cross_warmup>(this);
     rpc_server_->register_handler<&Proxy::main_recal>(this);
     rpc_server_->register_handler<&Proxy::help_recal>(this);
     rpc_server_->register_handler<&Proxy::block_relocation>(this);

@@ -208,6 +208,16 @@ namespace ECProject
     std::string task_id;
   };
 
+  struct HelpCrossWarmupReq
+  {
+    std::string task_id;
+    std::string main_proxy_ip;
+    int main_proxy_port = 0;
+    size_t bytes_total = 0;
+    unsigned int helper_cluster_id = 0;
+    unsigned int main_cluster_id = 0;
+  };
+
   struct LocationInfo
   {
     unsigned int cluster_id;
@@ -297,7 +307,8 @@ namespace ECProject
     MAIN_WRITEBACK = 4,
     HELP_READ_INTRA = 5,
     HELP_ENCODE = 6,
-    HELP_SEND_CROSS = 7
+    HELP_SEND_CROSS = 7,
+    HELP_WARMUP_CROSS = 8
   };
 
   struct RepairPhaseSpan
@@ -344,6 +355,15 @@ namespace ECProject
   };
 
   struct HelpRepairSendResp
+  {
+    bool success = true;
+    std::string err_msg;
+    double cross_cluster_time = 0.0;
+    std::vector<RepairPhaseSpan> phase_spans;
+    double phase_total_time = 0.0;
+  };
+
+  struct HelpCrossWarmupResp
   {
     bool success = true;
     std::string err_msg;
