@@ -151,15 +151,7 @@ namespace ECProject
 
   RepairResp Client::nodes_repair(std::vector<unsigned int> failed_node_ids)
   {
-    auto r = async_simple::coro::syncAwait(
-        rpc_coordinator_->call_for<&Coordinator::request_repair>(
-            std::chrono::seconds{500}, failed_node_ids, -1));
-    if (!r) {
-      std::cerr << "[RPC ERROR] request_repair(nodes) failed: "
-                << r.error().msg << std::endl;
-      return RepairResp{};
-    }
-    return r.value();
+    return nodes_random_repair(failed_node_ids);
   }
 
   RepairResp Client::nodes_random_repair(std::vector<unsigned int> failed_node_ids)
