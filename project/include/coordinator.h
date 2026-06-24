@@ -34,6 +34,7 @@ namespace ECProject
     void request_delete_by_stripe(std::vector<unsigned int> stripe_ids);
     // repair, repair a list of blocks in specified stripes (stripe_id>=0) or nodes (stripe_id=-1)
     RepairResp request_repair(std::vector<unsigned int> failed_ids, int stripe_id);
+    RepairResp request_random_repair(std::vector<unsigned int> failed_ids, int stripe_id);
     RepairResp request_flow_repair(std::vector<unsigned int> failed_ids, int stripe_id);
     RepairResp request_flow_unordered_concurrency_repair(
             std::vector<unsigned int> failed_ids, int stripe_id);
@@ -100,6 +101,8 @@ namespace ECProject
                                   std::vector<MainRepairPlan>& main_repairs,
                                   std::vector<std::vector<HelpRepairPlan>>& help_repairs);
     void do_repair(std::vector<unsigned int> failed_ids, int stripe_id,
+                   RepairResp& response);
+    void do_random_repair(std::vector<unsigned int> failed_ids, int stripe_id,
                    RepairResp& response);
     void do_flow_repair(std::vector<unsigned int> failed_ids, int stripe_id,
                    RepairResp& response);
