@@ -87,6 +87,7 @@ add_executable(run_coordinator
     src/coordinator/auxs.cpp
     src/coordinator/placement.cpp
     src/coordinator/repair.cpp
+    src/coordinator/random_repair.cpp
     src/coordinator/merge.cpp
     src/coordinator/coordinator.cpp
     src/coordinator/run_coordinator.cpp
