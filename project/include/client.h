@@ -22,6 +22,7 @@ namespace ECProject {
     void delete_all_stripes();
     // repair
     RepairResp nodes_repair(std::vector<unsigned int> failed_node_ids);
+    RepairResp nodes_random_repair(std::vector<unsigned int> failed_node_ids);
     RepairResp nodes_flow_repair(std::vector<unsigned int> failed_node_ids);
     RepairResp nodes_flow_unordered_concurrency_repair(
             std::vector<unsigned int> failed_node_ids);
